@@ -3,7 +3,6 @@ import { NavService } from './nav.service';
 import { AuthGuard } from 'src/users/auth/auth.guard';
 
 @Controller('api/graph')
-@UseGuards(AuthGuard)
 export class NavController {
   constructor(private readonly navService: NavService) { }
 
