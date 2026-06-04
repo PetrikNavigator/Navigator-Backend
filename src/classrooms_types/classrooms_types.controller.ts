@@ -11,9 +11,7 @@ export class ClassroomsTypesController {
   constructor(private readonly classroomsTypesService: ClassroomsTypesService) { }
 
   @Get()
-  getAll(
-    @Query("premise", ParseBigIntPipe) premise_id: bigint
-  ) {
+  getAll() {
     return this.classroomsTypesService.getAll()
   }
 

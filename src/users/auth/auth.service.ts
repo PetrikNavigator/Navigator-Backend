@@ -3,18 +3,15 @@ import { AdminsService } from 'src/users/admins/admins.service';
 import * as bcrypt from "bcrypt"
 import { JwtService } from '@nestjs/jwt';
 import { LoggedInAdmin, } from 'src/other/types/admin-types';
-import { PrismaService } from 'src/other/prisma/prisma.service';
 
 const BCRYPT_ROUNDS = 10
-type CreatableRole = "STUDENT" | "PREMISE_ADMIN"
 const DUMMY_HASH = bcrypt.hashSync('unknown-account-placeholder', BCRYPT_ROUNDS)
 
 @Injectable()
 export class AuthService {
   constructor(
     private readonly admins: AdminsService,
-    private readonly jwt: JwtService,
-    private readonly prisma: PrismaService,
+    private readonly jwt: JwtService
   ) { }
 
   async login(email: string, password: string): Promise<{ user: LoggedInAdmin, access_token: string }> {
