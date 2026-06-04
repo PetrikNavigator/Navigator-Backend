@@ -5,7 +5,6 @@ import { AdminsModule } from 'src/users/admins/admins.module';
 import { JwtModule } from '@nestjs/jwt';
 import { ConfigModule, ConfigService } from '@nestjs/config';
 import { PrismaModule } from 'src/other/prisma/prisma.module';
-import { BullModule } from '@nestjs/bullmq';
 
 @Module({
   imports: [

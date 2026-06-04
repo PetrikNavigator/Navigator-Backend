@@ -13,12 +13,7 @@ export class AdminsService {
    */
   async findOne(email: string): Promise<usersModel | undefined> {
     const admin = await this.prisma.users.findFirst({
-      where: {
-        AND: [
-          { email: email },
-          { changed_password: true }
-        ]
-      }
+      where: { email: email }
     })
 
     if (!admin) {
