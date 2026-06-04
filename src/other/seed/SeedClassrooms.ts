@@ -1,75 +1,44 @@
 import { Prisma } from "generated/prisma/client";
 
 export function SeedClassrooms(count: number, classroom_types_count: number): Prisma.classroomsCreateManyInput[] {
-    // const classrooms: Prisma.classroomsCreateManyInput[] = Array.from({ length: count }, () => ({
-    //     name: ,
-    //     capacity: ,
-    //     storey: ,
-    //     x: ,
-    //     y: ,
-    //     size_x: ,
-    //     size_y: ,
-    //     size_z: ,
-    //     description: ,
-    //     building_id: ,
-    //     type_id: 
-    // }))
-
-    // -------------------------------------------------------------------------
-    // PREMISE 1 — "A" épület (building_id 1), laid out from the real floor plans.
-    //
-    // Coordinate convention (metres, schematic):
-    //   - The main corridor runs east along the y=0 line (x: 0 -> ~52).
-    //   - South-side rooms sit below it (negative y), facing north  -> rotation 0
-    //   - North-side rooms sit above it (positive y), facing south  -> rotation 180
-    //   - At the east end the corridor turns north into a wing (x=52):
-    //       * east-side rooms (x ~59) face west  -> rotation 270
-    //       * west-side rooms (x ~45) face east  -> rotation 90
-    //   - A standard tanterem is ~8 x 6 x 3 (based on the original A001).
-    // -------------------------------------------------------------------------
     const classrooms: Prisma.classroomsCreateManyInput[] = [
-        // ===== "A" épület — földszint (storey 0) =====
-        { id: 1, name: "A005", capacity: 0, storey: 0, x: 2, y: -4, rotation: 0, size_x: 4, size_y: 4, size_z: 3, description: "Férfi WC", building_id: 1, type_id: 11 },
-        { id: 2, name: "A007", capacity: 24, storey: 0, x: 10, y: -5, rotation: 0, size_x: 8, size_y: 6, size_z: 3, description: "Laboratórium", building_id: 1, type_id: 3 },
-        { id: 3, name: "A009", capacity: 24, storey: 0, x: 20, y: -5, rotation: 0, size_x: 8, size_y: 6, size_z: 3, description: "Laboratórium", building_id: 1, type_id: 3 },
-        { id: 4, name: "A010", capacity: 30, storey: 0, x: 30, y: -5, rotation: 0, size_x: 8, size_y: 6, size_z: 3, description: "Tanterem", building_id: 1, type_id: 1 },
-        { id: 5, name: "A008", capacity: 6, storey: 0, x: 14, y: 6, rotation: 180, size_x: 6, size_y: 5, size_z: 3, description: "Előkészítő", building_id: 1, type_id: 6 },
-        { id: 6, name: "A027", capacity: 2, storey: 0, x: 38, y: -4, rotation: 0, size_x: 4, size_y: 4, size_z: 3, description: "Porta", building_id: 1, type_id: 12 },
-        { id: 7, name: "A024", capacity: 0, storey: 0, x: 43, y: -4, rotation: 0, size_x: 4, size_y: 4, size_z: 3, description: "Női WC", building_id: 1, type_id: 11 },
-        { id: 8, name: "A026", capacity: 0, storey: 0, x: 48, y: -4, rotation: 0, size_x: 4, size_y: 4, size_z: 3, description: "Akadálymentes WC", building_id: 1, type_id: 11 },
-        { id: 9, name: "A037", capacity: 60, storey: 0, x: 30, y: 18, rotation: 180, size_x: 16, size_y: 12, size_z: 6, description: "Tornaterem", building_id: 1, type_id: 9 },
-        { id: 10, name: "A032", capacity: 20, storey: 0, x: 23, y: 8, rotation: 180, size_x: 6, size_y: 5, size_z: 3, description: "Tornatermi öltöző", building_id: 1, type_id: 10 },
-        { id: 11, name: "A034", capacity: 20, storey: 0, x: 34, y: 8, rotation: 180, size_x: 6, size_y: 5, size_z: 3, description: "Tornatermi öltöző", building_id: 1, type_id: 10 },
-        { id: 12, name: "A014", capacity: 24, storey: 0, x: 45, y: 8, rotation: 90, size_x: 8, size_y: 6, size_z: 3, description: "Laboratórium", building_id: 1, type_id: 3 },
-        { id: 13, name: "A015", capacity: 30, storey: 0, x: 45, y: 17, rotation: 90, size_x: 8, size_y: 6, size_z: 3, description: "Tanterem", building_id: 1, type_id: 1 },
-        { id: 14, name: "A016", capacity: 10, storey: 0, x: 59, y: 6, rotation: 270, size_x: 6, size_y: 6, size_z: 3, description: "Tanári szoba", building_id: 1, type_id: 5 },
-        { id: 15, name: "A017", capacity: 6, storey: 0, x: 59, y: 14, rotation: 270, size_x: 6, size_y: 6, size_z: 3, description: "Igazgató helyettes", building_id: 1, type_id: 8 },
-        { id: 16, name: "A018", capacity: 24, storey: 0, x: 59, y: 23, rotation: 270, size_x: 8, size_y: 6, size_z: 3, description: "Informatika", building_id: 1, type_id: 4 },
-        { id: 17, name: "A023", capacity: 24, storey: 0, x: 59, y: 32, rotation: 270, size_x: 8, size_y: 6, size_z: 3, description: "Informatika", building_id: 1, type_id: 4 },
+        // foldszint
 
-        // ===== "A" épület — 1. emelet (storey 1) =====
-        { id: 18, name: "A103", capacity: 0, storey: 1, x: 2, y: -4, rotation: 0, size_x: 4, size_y: 4, size_z: 3, description: "Férfi WC", building_id: 1, type_id: 11 },
-        { id: 19, name: "A105", capacity: 24, storey: 1, x: 10, y: -5, rotation: 0, size_x: 8, size_y: 6, size_z: 3, description: "Laboratórium", building_id: 1, type_id: 3 },
-        { id: 20, name: "A106", capacity: 24, storey: 1, x: 19, y: -5, rotation: 0, size_x: 8, size_y: 6, size_z: 3, description: "Laboratórium", building_id: 1, type_id: 3 },
-        { id: 21, name: "A108", capacity: 24, storey: 1, x: 29, y: -5, rotation: 0, size_x: 8, size_y: 6, size_z: 3, description: "Laboratórium", building_id: 1, type_id: 3 },
-        { id: 22, name: "A109", capacity: 12, storey: 1, x: 35, y: 6, rotation: 180, size_x: 6, size_y: 5, size_z: 3, description: "Csoport szoba", building_id: 1, type_id: 7 },
-        { id: 23, name: "A110", capacity: 10, storey: 1, x: 41, y: 6, rotation: 180, size_x: 6, size_y: 5, size_z: 3, description: "Tanári szoba", building_id: 1, type_id: 5 },
-        { id: 24, name: "A133", capacity: 10, storey: 1, x: 18, y: 7, rotation: 180, size_x: 6, size_y: 5, size_z: 3, description: "Tanári szoba", building_id: 1, type_id: 5 },
-        { id: 25, name: "A132", capacity: 6, storey: 1, x: 25, y: 7, rotation: 180, size_x: 6, size_y: 5, size_z: 3, description: "Igazgató helyettes", building_id: 1, type_id: 8 },
-        { id: 26, name: "A131", capacity: 10, storey: 1, x: 32, y: 11, rotation: 180, size_x: 6, size_y: 5, size_z: 3, description: "Tanári szoba", building_id: 1, type_id: 5 },
-        { id: 27, name: "A116", capacity: 10, storey: 1, x: 40, y: 11, rotation: 180, size_x: 6, size_y: 5, size_z: 3, description: "Tanári szoba", building_id: 1, type_id: 5 },
-        { id: 28, name: "A117", capacity: 24, storey: 1, x: 45, y: 9, rotation: 90, size_x: 8, size_y: 6, size_z: 3, description: "Informatika", building_id: 1, type_id: 4 },
-        { id: 29, name: "A118", capacity: 24, storey: 1, x: 45, y: 18, rotation: 90, size_x: 8, size_y: 6, size_z: 3, description: "Informatika", building_id: 1, type_id: 4 },
-        { id: 30, name: "A114", capacity: 0, storey: 1, x: 38, y: -4, rotation: 0, size_x: 4, size_y: 4, size_z: 3, description: "Dohányzó", building_id: 1, type_id: 12 },
-        { id: 31, name: "A126", capacity: 0, storey: 1, x: 43, y: -4, rotation: 0, size_x: 4, size_y: 4, size_z: 3, description: "Női WC", building_id: 1, type_id: 11 },
-        { id: 32, name: "A127", capacity: 0, storey: 1, x: 48, y: -4, rotation: 0, size_x: 4, size_y: 4, size_z: 3, description: "Tanári WC", building_id: 1, type_id: 11 },
-        { id: 33, name: "A128", capacity: 0, storey: 1, x: 52, y: -4, rotation: 0, size_x: 4, size_y: 4, size_z: 3, description: "Akadálymentes WC", building_id: 1, type_id: 11 },
-        { id: 34, name: "A119", capacity: 30, storey: 1, x: 59, y: 6, rotation: 270, size_x: 8, size_y: 6, size_z: 3, description: "Tanterem", building_id: 1, type_id: 1 },
-        { id: 35, name: "A120", capacity: 24, storey: 1, x: 59, y: 15, rotation: 270, size_x: 8, size_y: 6, size_z: 3, description: "Informatika", building_id: 1, type_id: 4 },
-        { id: 36, name: "A121", capacity: 24, storey: 1, x: 59, y: 24, rotation: 270, size_x: 8, size_y: 6, size_z: 3, description: "Informatika", building_id: 1, type_id: 4 },
-        { id: 37, name: "A123", capacity: 30, storey: 1, x: 59, y: 33, rotation: 270, size_x: 8, size_y: 6, size_z: 3, description: "Tanterem", building_id: 1, type_id: 1 },
+        { id: 1, name: "A porta", capacity: 4, storey: 0, x: 3, y: -1, rotation: 270, size_x: 9, size_y: 11, size_z: 6, description: "A épület porta", building_id: 1, type_id: 30 },
+        { id: 2, name: "A014", capacity: 1, storey: 0, x: 21, y: 4, rotation: 90, size_x: 20, size_y: 15, size_z: 6, description: "Homokminta elemző labor", building_id: 1, type_id: 3 },
+        { id: 3, name: "A015", capacity: 1, storey: 0, x: 21, y: 25, rotation: 90, size_x: 20, size_y: 15, size_z: 6, description: "Gőgh Zsolt", building_id: 1, type_id: 3 },
+        { id: 4, name: "A016", capacity: 1, storey: 0, x: 11, y: 48, rotation: 180, size_x: 6, size_y: 15, size_z: 6, description: "Király Zanza", building_id: 1, type_id: 5 },
+        { id: 5, name: "A017", capacity: 1, storey: 0, x: 18, y: 48, rotation: 180, size_x: 6, size_y: 15, size_z: 6, description: "Ősfasz", building_id: 1, type_id: 27 },
+        { id: 6, name: "A018", capacity: 1, storey: 0, x: 33, y: 48, rotation: 180, size_x: 22, size_y: 15, size_z: 6, description: "Kecskepornó", building_id: 1, type_id: 4 },
+        { id: 7, name: "A023", capacity: 1, storey: 0, x: 55, y: 39, rotation: 90, size_x: 18, size_y: 20, size_z: 6, description: "ezaz ezaz hu de jo", building_id: 1, type_id: 4 },
+        { id: 8, name: "A010", capacity: 32, storey: 0, x: 14, y: -30, rotation: 90, size_x: 10, size_y: 11, size_z: 6, description: "Kiséretségi", building_id: 1, type_id: 1 },
+        { id: 9, name: "A009", capacity: 15, storey: 0, x: 14, y: -46, rotation: 90, size_x: 20, size_y: 11, size_z: 6, description: "Kotyvasztó labor", building_id: 1, type_id: 3 },
+        { id: 10, name: "A007", capacity: 15, storey: 0, x: 14, y: -69, rotation: 90, size_x: 24, size_y: 11, size_z: 6, description: "Kotyvasztó labor 2", building_id: 1, type_id: 3 },
+        { id: 11, name: "A037", capacity: 1, storey: 0, x: 59, y: -11, rotation: 90, size_x: 31, size_y: 21, size_z: 10, description: "Tesiterem", building_id: 1, type_id: 32 },
+        { id: 12, name: "A034", capacity: 1, storey: 0, x: 43, y: -1, rotation: 180, size_x: 10, size_y: 11, size_z: 6, description: "fiú öltöző", building_id: 1, type_id: 31 },
+        { id: 13, name: "A032", capacity: 1, storey: 0, x: 43, y: -21, rotation: 0, size_x: 10, size_y: 11, size_z: 6, description: "Tot Bela", building_id: 1, type_id: 31 },
 
-        // ===== "A" épület — 2. emelet (storey 2) =====
+        // elso emelet
+
+        { id: 14, name: "A108", capacity: 1, storey: 1, x: 16, y: -48, rotation: 90, size_x: 14, size_y: 15, size_z: 6, description: "terem", building_id: 1, type_id: 3 },
+        { id: 15, name: "A109", capacity: 1, storey: 1, x: 16, y: -36, rotation: 90, size_x: 8, size_y: 15, size_z: 6, description: "Tóth Éva", building_id: 1, type_id: 7 },
+        { id: 16, name: "A110", capacity: 1, storey: 1, x: 16, y: -28, rotation: 90, size_x: 6, size_y: 15, size_z: 6, description: "Tanári", building_id: 1, type_id: 5 },
+        { id: 17, name: "A106", capacity: 1, storey: 1, x: 16, y: -62, rotation: 90, size_x: 12, size_y: 15, size_z: 6, description: "Laboránsok laborja", building_id: 1, type_id: 3 },
+        { id: 18, name: "A105", capacity: 1, storey: 1, x: 16, y: -75, rotation: 90, size_x: 12, size_y: 15, size_z: 6, description: "hu de jo", building_id: 1, type_id: 3 },
+        { id: 19, name: "A116", capacity: 1, storey: 1, x: 21, y: -4, rotation: 90, size_x: 10, size_y: 15, size_z: 6, description: "itt büdös van!", building_id: 1, type_id: 5 },
+        { id: 20, name: "A117", capacity: 1, storey: 1, x: 21, y: 10, rotation: 90, size_x: 16, size_y: 15, size_z: 6, description: "borzalom", building_id: 1, type_id: 4 },
+        { id: 21, name: "A118", capacity: 1, storey: 1, x: 21, y: 27, rotation: 90, size_x: 16, size_y: 15, size_z: 6, description: "masik borzalom", building_id: 1, type_id: 4 },
+        { id: 22, name: "A119", capacity: 1, storey: 1, x: 10, y: 48, rotation: 180, size_x: 14, size_y: 15, size_z: 6, description: "potyi", building_id: 1, type_id: 1 },
+        { id: 23, name: "A120", capacity: 1, storey: 1, x: 25, y: 48, rotation: 180, size_x: 14, size_y: 15, size_z: 6, description: "iszonyatos halozat terem 1", building_id: 1, type_id: 4 },
+        { id: 24, name: "A121", capacity: 1, storey: 1, x: 39, y: 48, rotation: 180, size_x: 12, size_y: 15, size_z: 6, description: "iszonyatos halozat 2", building_id: 1, type_id: 4 },
+        { id: 25, name: "A123", capacity: 1, storey: 1, x: 54, y: 38, rotation: 90, size_x: 12, size_y: 17, size_z: 6, description: "E", building_id: 1, type_id: 1 },
+        { id: 26, name: "A122", capacity: 1, storey: 1, x: 54, y: 50, rotation: 90, size_x: 10, size_y: 17, size_z: 6, description: "iszonyatos halozat 3", building_id: 1, type_id: 4 },
+        { id: 27, name: "A126", capacity: 1, storey: 1, x: 4, y: 7, rotation: 270, size_x: 10, size_y: 8, size_z: 6, description: "lány wc", building_id: 1, type_id: 28 },
+        { id: 28, name: "A127", capacity: 1, storey: 1, x: 4, y: -1, rotation: 270, size_x: 4, size_y: 8, size_z: 6, description: "big j wc", building_id: 1, type_id: 33 },
+        { id: 29, name: "A128", capacity: 1, storey: 1, x: 4, y: -6, rotation: 270, size_x: 4, size_y: 8, size_z: 6, description: "event hely", building_id: 1, type_id: 29 },
+
+        // masodik emelet
+
         { id: 38, name: "A203", capacity: 0, storey: 2, x: 2, y: -4, rotation: 0, size_x: 4, size_y: 4, size_z: 3, description: "Férfi WC", building_id: 1, type_id: 11 },
         { id: 39, name: "A205", capacity: 30, storey: 2, x: 10, y: -5, rotation: 0, size_x: 8, size_y: 6, size_z: 3, description: "Tanterem", building_id: 1, type_id: 1 },
         { id: 40, name: "A206", capacity: 30, storey: 2, x: 19, y: -5, rotation: 0, size_x: 8, size_y: 6, size_z: 3, description: "Tanterem", building_id: 1, type_id: 1 },
@@ -171,30 +140,6 @@ export function SeedClassrooms(count: number, classroom_types_count: number): Pr
         { id: 118, name: "B335", capacity: 0, storey: 3, x: 22, y: 25, rotation: 0, size_x: 3, size_y: 3, size_z: 3, description: "Női WC", building_id: 2, type_id: 11 },
         { id: 119, name: "B332", capacity: 0, storey: 3, x: 22, y: 20, rotation: 0, size_x: 3, size_y: 3, size_z: 3, description: "Férfi WC", building_id: 2, type_id: 11 },
         { id: 120, name: "B323", capacity: 16, storey: 3, x: 22, y: 13, rotation: 0, size_x: 6, size_y: 5, size_z: 3, description: "Laboratórium", building_id: 2, type_id: 3 },
-
-        // ===== PREMISE 2 (proba) — "A" épület (building_id 3) =====
-        { id: 121, name: "A001", capacity: 30, storey: 0, x: 8, y: 0, rotation: 0, size_x: 8, size_y: 6, size_z: 3, description: "Földszinti előadó", building_id: 3, type_id: 14 },
-        { id: 122, name: "A002", capacity: 24, storey: 0, x: 44, y: 0, rotation: 0, size_x: 6, size_y: 6, size_z: 3, description: "Földszinti tanterem", building_id: 3, type_id: 13 },
-        { id: 123, name: "A003", capacity: 24, storey: 0, x: 72, y: 0, rotation: 0, size_x: 6, size_y: 6, size_z: 3, description: "Földszinti tanterem", building_id: 3, type_id: 13 },
-        { id: 124, name: "A004", capacity: 30, storey: 0, x: 8, y: 0, rotation: 180, size_x: 8, size_y: 6, size_z: 3, description: "Étkező", building_id: 3, type_id: 23 },
-        { id: 125, name: "A005", capacity: 20, storey: 0, x: 44, y: 0, rotation: 180, size_x: 6, size_y: 6, size_z: 3, description: "Iroda", building_id: 3, type_id: 20 },
-        { id: 126, name: "A010", capacity: 20, storey: 0, x: 96, y: 24, rotation: 90, size_x: 6, size_y: 5, size_z: 3, description: "Könyvtár", building_id: 3, type_id: 22 },
-        { id: 127, name: "A011", capacity: 20, storey: 0, x: 96, y: 52, rotation: 90, size_x: 6, size_y: 5, size_z: 3, description: "Olvasóterem", building_id: 3, type_id: 22 },
-        { id: 128, name: "A101", capacity: 30, storey: 1, x: 8, y: 0, rotation: 0, size_x: 8, size_y: 6, size_z: 3, description: "Informatika labor", building_id: 3, type_id: 17 },
-        { id: 129, name: "A102", capacity: 24, storey: 1, x: 44, y: 0, rotation: 0, size_x: 6, size_y: 6, size_z: 3, description: "Tanterem", building_id: 3, type_id: 13 },
-        { id: 130, name: "A103", capacity: 24, storey: 1, x: 72, y: 0, rotation: 0, size_x: 6, size_y: 6, size_z: 3, description: "Tanterem", building_id: 3, type_id: 13 },
-        { id: 131, name: "A104", capacity: 30, storey: 1, x: 8, y: 0, rotation: 180, size_x: 8, size_y: 6, size_z: 3, description: "Nyelvi labor", building_id: 3, type_id: 18 },
-        { id: 132, name: "A105", capacity: 24, storey: 1, x: 44, y: 0, rotation: 180, size_x: 6, size_y: 6, size_z: 3, description: "Tanterem", building_id: 3, type_id: 13 },
-        { id: 133, name: "A110", capacity: 20, storey: 1, x: 96, y: 24, rotation: 90, size_x: 6, size_y: 5, size_z: 3, description: "Tanárl", building_id: 3, type_id: 19 },
-        { id: 134, name: "A201", capacity: 24, storey: 2, x: 8, y: 0, rotation: 0, size_x: 6, size_y: 6, size_z: 3, description: "Kémia labor", building_id: 3, type_id: 15 },
-        { id: 135, name: "A202", capacity: 24, storey: 2, x: 8, y: 0, rotation: 180, size_x: 6, size_y: 6, size_z: 3, description: "Fizika labor", building_id: 3, type_id: 16 },
-
-        // ===== PREMISE 2 (proba) — "B" épület (building_id 4) =====
-        { id: 136, name: "B001", capacity: 60, storey: 0, x: 8, y: 0, rotation: 0, size_x: 10, size_y: 8, size_z: 4, description: "Tornaterem", building_id: 4, type_id: 21 },
-        { id: 137, name: "B101", capacity: 24, storey: 1, x: 8, y: 0, rotation: 0, size_x: 6, size_y: 6, size_z: 3, description: "Tanterem", building_id: 4, type_id: 13 },
-        { id: 138, name: "B102", capacity: 24, storey: 1, x: 40, y: 0, rotation: 0, size_x: 6, size_y: 6, size_z: 3, description: "Tanterem", building_id: 4, type_id: 13 },
-        { id: 139, name: "B103", capacity: 24, storey: 1, x: 8, y: 0, rotation: 180, size_x: 6, size_y: 6, size_z: 3, description: "Tanterem", building_id: 4, type_id: 13 },
-        { id: 140, name: "B104", capacity: 24, storey: 1, x: 40, y: 0, rotation: 180, size_x: 6, size_y: 6, size_z: 3, description: "Tanterem", building_id: 4, type_id: 13 },
     ]
 
     return classrooms

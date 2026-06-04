@@ -34,7 +34,7 @@ export class ClassroomsTypesService {
         where: { name: body.name }
       })
 
-      if (already)
+      if (already && type_id !== already.id)
         throw new ConflictException("A classroom type with this name already exist!")
     }
 

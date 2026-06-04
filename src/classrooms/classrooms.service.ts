@@ -12,7 +12,9 @@ export class ClassroomsService {
     ) { }
 
     async getClassrooms(): Promise<Prisma.classroomsCreateManyInput[]> {
-        return await this.prisma.classrooms.findMany()
+        return await this.prisma.classrooms.findMany({
+            orderBy: { name: "asc" }
+        })
     }
 
     async addClassrooms(
