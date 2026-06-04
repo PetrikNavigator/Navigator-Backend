@@ -1,0 +1,562 @@
+[
+    {
+        "name": "[KA6] Külső Oktató",
+        "short": "külső",
+        "class_teacher_of": null
+    },
+    {
+        "name": "Babusa Tamás",
+        "short": "BT",
+        "class_teacher_of": null
+    },
+    {
+        "name": "Bagóné Tóth Katalin",
+        "short": "Bagóné",
+        "class_teacher_of": null
+    },
+    {
+        "name": "Bálint György",
+        "short": "Bálint",
+        "class_teacher_of": null
+    },
+    {
+        "name": "Balogh Botond",
+        "short": "Balogh",
+        "class_teacher_of": null
+    },
+    {
+        "name": "Balogh Zoltán",
+        "short": "Barabás",
+        "class_teacher_of": null
+    },
+    {
+        "name": "Balogh_ Zoltán",
+        "short": "BZoltán",
+        "class_teacher_of": null
+    },
+    {
+        "name": "Barabás Gergő",
+        "short": "BK",
+        "class_teacher_of": "10.A"
+    },
+    {
+        "name": "Barta Adél",
+        "short": "Barta",
+        "class_teacher_of": null
+    },
+    {
+        "name": "Bátki Ottilia",
+        "short": "Bátki",
+        "class_teacher_of": null
+    },
+    {
+        "name": "Bende Gyöngyi",
+        "short": "Bende",
+        "class_teacher_of": null
+    },
+    {
+        "name": "Benýó Judit Barbála",
+        "short": "Benyó",
+        "class_teacher_of": null
+    },
+    {
+        "name": "Béresné Bodó Noémi",
+        "short": "Béresné",
+        "class_teacher_of": null
+    },
+    {
+        "name": "Betöltetlen szoftver",
+        "short": "BetSzoft",
+        "class_teacher_of": null
+    },
+    {
+        "name": "Bogdán Marianna",
+        "short": "BM",
+        "class_teacher_of": null
+    },
+    {
+        "name": "Bozóki Judit",
+        "short": "Bozóki",
+        "class_teacher_of": "11.B"
+    },
+    {
+        "name": "Bődi István",
+        "short": "Bődi",
+        "class_teacher_of": null
+    },
+    {
+        "name": "Budaházi Bence",
+        "short": "BB",
+        "class_teacher_of": null
+    },
+    {
+        "name": "Czikkely Imre",
+        "short": "Czikkely",
+        "class_teacher_of": "9.D"
+    },
+    {
+        "name": "Czinkóczi Tamás",
+        "short": "Czinkóczi",
+        "class_teacher_of": "11.D"
+    },
+    {
+        "name": "Csák Szilárd Csongor",
+        "short": "Csák",
+        "class_teacher_of": null
+    },
+    {
+        "name": "Csutak Zsolt",
+        "short": "Csutak",
+        "class_teacher_of": null
+    },
+    {
+        "name": "Darányi Katalin",
+        "short": "Darányi",
+        "class_teacher_of": "12.A"
+    },
+    {
+        "name": "De Rose Lynn",
+        "short": "De Rose Lynn",
+        "class_teacher_of": null
+    },
+    {
+        "name": "Deák István",
+        "short": "Deák",
+        "class_teacher_of": null
+    },
+    {
+        "name": "Demkó Erika",
+        "short": "DE",
+        "class_teacher_of": null
+    },
+    {
+        "name": "Domján Edit Dóra",
+        "short": "Domján",
+        "class_teacher_of": null
+    },
+    {
+        "name": "Dr. Berkesé Okos Melinda",
+        "short": "Bertalan",
+        "class_teacher_of": null
+    },
+    {
+        "name": "Dr. Lois Isabella",
+        "short": "dr Lois",
+        "class_teacher_of": null
+    },
+    {
+        "name": "Dr. Máté Marianna",
+        "short": "dr. Máté",
+        "class_teacher_of": "9.KNY"
+    },
+    {
+        "name": "Dr. Nagyé Székely Emőke",
+        "short": "NSZE",
+        "class_teacher_of": null
+    },
+    {
+        "name": "Dr. Szabó Marianna",
+        "short": "Dr. Szabó",
+        "class_teacher_of": "12.C"
+    },
+    {
+        "name": "Duschák Zsuzsanna",
+        "short": "Duschák",
+        "class_teacher_of": "11.A"
+    },
+    {
+        "name": "Elekesé Sallai Mónika Angéla",
+        "short": "ESM",
+        "class_teacher_of": null
+    },
+    {
+        "name": "Fandel Richárd Gábor",
+        "short": "Fandel",
+        "class_teacher_of": null
+    },
+    {
+        "name": "Ferencei Boglárka",
+        "short": "Ferencei",
+        "class_teacher_of": null
+    },
+    {
+        "name": "Forgó Zsuzsanna",
+        "short": "Forgó",
+        "class_teacher_of": null
+    },
+    {
+        "name": "Fortuna Zsuzsanna",
+        "short": "Fortuna",
+        "class_teacher_of": null
+    },
+    {
+        "name": "Frank Attila",
+        "short": "Frank",
+        "class_teacher_of": null
+    },
+    {
+        "name": "Gál-Berey Csilla",
+        "short": "Gál-Berey",
+        "class_teacher_of": null
+    },
+    {
+        "name": "Gőgh Zsolt",
+        "short": "Gőgh",
+        "class_teacher_of": null
+    },
+    {
+        "name": "Guth Gabriella",
+        "short": "Guth",
+        "class_teacher_of": "9.E"
+    },
+    {
+        "name": "Hajagos Máté",
+        "short": "Hajagos",
+        "class_teacher_of": "10.D"
+    },
+    {
+        "name": "Halász Gábor",
+        "short": "HalászG",
+        "class_teacher_of": null
+    },
+    {
+        "name": "Hertelendi Gábor",
+        "short": "Hertelendi",
+        "class_teacher_of": null
+    },
+    {
+        "name": "Horváth Gyöngyi",
+        "short": "HorváthGy",
+        "class_teacher_of": null
+    },
+    {
+        "name": "Horváth Norbert",
+        "short": "HorváthN",
+        "class_teacher_of": null
+    },
+    {
+        "name": "Horváth Zoltán",
+        "short": "HorváthZ",
+        "class_teacher_of": null
+    },
+    {
+        "name": "Jabelkó-Tolnai Csilla",
+        "short": "Jabelko-Tolnai",
+        "class_teacher_of": null
+    },
+    {
+        "name": "Kállóné Husi Zsuzsanna",
+        "short": "Kállóné",
+        "class_teacher_of": null
+    },
+    {
+        "name": "Karsai Gergő",
+        "short": "Karsai",
+        "class_teacher_of": null
+    },
+    {
+        "name": "Kasparek Péter",
+        "short": "Kasparek",
+        "class_teacher_of": null
+    },
+    {
+        "name": "Király Zalán",
+        "short": "Király",
+        "class_teacher_of": null
+    },
+    {
+        "name": "Koczka István",
+        "short": "Koczka",
+        "class_teacher_of": null
+    },
+    {
+        "name": "Kollár Zsuzsanna",
+        "short": "KZS",
+        "class_teacher_of": "9.A"
+    },
+    {
+        "name": "Kovács Olivér",
+        "short": "KovácsO",
+        "class_teacher_of": "12.B"
+    },
+    {
+        "name": "Kovács Zoltán",
+        "short": "KZ",
+        "class_teacher_of": null
+    },
+    {
+        "name": "Kovácsné Antal Éva",
+        "short": "Kovácsné",
+        "class_teacher_of": null
+    },
+    {
+        "name": "Kugyellné Schmidtka Ágnes",
+        "short": "Kugyella",
+        "class_teacher_of": null
+    },
+    {
+        "name": "Külső",
+        "short": null,
+        "class_teacher_of": null
+    },
+    {
+        "name": "Laczkó László",
+        "short": "Laczkó",
+        "class_teacher_of": null
+    },
+    {
+        "name": "Laman Richárd",
+        "short": "Laman",
+        "class_teacher_of": null
+    },
+    {
+        "name": "Latabár Endre",
+        "short": "Latabár",
+        "class_teacher_of": "11.E"
+    },
+    {
+        "name": "Lénárdné Bárdossy Ágota",
+        "short": "Lénárdné",
+        "class_teacher_of": null
+    },
+    {
+        "name": "Lovas Margaret",
+        "short": "Lovas",
+        "class_teacher_of": null
+    },
+    {
+        "name": "Lukács Ferenc",
+        "short": "Lukács",
+        "class_teacher_of": null
+    },
+    {
+        "name": "Madarász Ákos",
+        "short": "Madarász",
+        "class_teacher_of": null
+    },
+    {
+        "name": "Márta József István",
+        "short": "Márta",
+        "class_teacher_of": null
+    },
+    {
+        "name": "Merényi Miklós",
+        "short": "Merényi",
+        "class_teacher_of": null
+    },
+    {
+        "name": "Mészáros Tamás",
+        "short": "MT",
+        "class_teacher_of": null
+    },
+    {
+        "name": "Nagy Judit",
+        "short": "NJ",
+        "class_teacher_of": null
+    },
+    {
+        "name": "Nagyné Németh Ildikó",
+        "short": "Nagyné",
+        "class_teacher_of": null
+    },
+    {
+        "name": "nem igényel oktatót",
+        "short": "n.o.",
+        "class_teacher_of": null
+    },
+    {
+        "name": "Nyisztorné Kozma Amália Éva",
+        "short": "Nyisztorné",
+        "class_teacher_of": null
+    },
+    {
+        "name": "Omischl-Németh Eszter",
+        "short": "NE",
+        "class_teacher_of": null
+    },
+    {
+        "name": "Omischl-Németh Eszter",
+        "short": "O-NémethE",
+        "class_teacher_of": "10.G"
+    },
+    {
+        "name": "Pál Csenge",
+        "short": "Pál",
+        "class_teacher_of": null
+    },
+    {
+        "name": "Pappné Debreczeni Ildikó",
+        "short": "PDI",
+        "class_teacher_of": null
+    },
+    {
+        "name": "Penksza Károlyné",
+        "short": "Penksza",
+        "class_teacher_of": null
+    },
+    {
+        "name": "Petri Judit",
+        "short": "Petri",
+        "class_teacher_of": "9.B"
+    },
+    {
+        "name": "Rápolthy Bálint",
+        "short": "Rápolthy",
+        "class_teacher_of": null
+    },
+    {
+        "name": "Rausch Péter",
+        "short": "RP",
+        "class_teacher_of": "10.C"
+    },
+    {
+        "name": "Ribni Ferenc",
+        "short": "Ribni",
+        "class_teacher_of": null
+    },
+    {
+        "name": "Ribní Frantisek",
+        "short": "Ribní",
+        "class_teacher_of": null
+    },
+    {
+        "name": "Sárközi-Paulik Brigitta",
+        "short": "SPB",
+        "class_teacher_of": "10.E"
+    },
+    {
+        "name": "Schubert Bence",
+        "short": "Schubert",
+        "class_teacher_of": null
+    },
+    {
+        "name": "Seres Orsolya",
+        "short": "Seres",
+        "class_teacher_of": "9.C"
+    },
+    {
+        "name": "Siska Dávid",
+        "short": "Siska",
+        "class_teacher_of": null
+    },
+    {
+        "name": "Somogyi Zsolt",
+        "short": "Somogyi",
+        "class_teacher_of": null
+    },
+    {
+        "name": "Sőre Ferenc",
+        "short": "Sőre",
+        "class_teacher_of": null
+    },
+    {
+        "name": "Szabados István",
+        "short": "Szabados",
+        "class_teacher_of": null
+    },
+    {
+        "name": "Szajkó Orsolya",
+        "short": "Szajkó",
+        "class_teacher_of": null
+    },
+    {
+        "name": "Szellner-Bakos Gabriella",
+        "short": "Szellner-B.",
+        "class_teacher_of": null
+    },
+    {
+        "name": "Szolnok Ádám",
+        "short": "Szolnok",
+        "class_teacher_of": null
+    },
+    {
+        "name": "Takács Emese",
+        "short": "Takács",
+        "class_teacher_of": null
+    },
+    {
+        "name": "Tihanyi Péter",
+        "short": "Tihanyi",
+        "class_teacher_of": null
+    },
+    {
+        "name": "Tóth Béla",
+        "short": "TóthB",
+        "class_teacher_of": null
+    },
+    {
+        "name": "Tóth Edina",
+        "short": "TóthEdina",
+        "class_teacher_of": null
+    },
+    {
+        "name": "Tóth Enikő",
+        "short": "TEnikő",
+        "class_teacher_of": null
+    },
+    {
+        "name": "Tóth Éva",
+        "short": "TÉ",
+        "class_teacher_of": "12.D"
+    },
+    {
+        "name": "Tóth Krisztina",
+        "short": "TóthK",
+        "class_teacher_of": "10.B"
+    },
+    {
+        "name": "Uhlár Zoltán",
+        "short": "Uhlár",
+        "class_teacher_of": null
+    },
+    {
+        "name": "Urbán Barbara",
+        "short": "Urbán",
+        "class_teacher_of": null
+    },
+    {
+        "name": "Urbin Péter",
+        "short": "Urbin",
+        "class_teacher_of": null
+    },
+    {
+        "name": "Vámos Tibor",
+        "short": "VámosT",
+        "class_teacher_of": "11.C"
+    },
+    {
+        "name": "Varga László",
+        "short": "Varga",
+        "class_teacher_of": null
+    },
+    {
+        "name": "Veres Gyula",
+        "short": "Veres",
+        "class_teacher_of": null
+    },
+    {
+        "name": "Lévai Viktória",
+        "short": null,
+        "class_teacher_of": null
+    },
+    {
+        "name": "Villányi-Borsics Eszter",
+        "short": "Villányi-Borsics",
+        "class_teacher_of": "12.E"
+    },
+    {
+        "name": "Völgyi Ferenc Iván",
+        "short": "Völgyi",
+        "class_teacher_of": null
+    },
+    {
+        "name": "Webváltó",
+        "short": null,
+        "class_teacher_of": null
+    },
+    {
+        "name": "Weisz Ilona",
+        "short": "Weisz",
+        "class_teacher_of": null
+    }
+]

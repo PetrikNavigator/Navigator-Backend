@@ -1,0 +1,64 @@
+name: navigator-backend
+
+version: "3.9"
+
+services:
+  navigator-backend:
+    container_name: navigator-backend
+    image: navigator-backend:latest
+    build:
+      context: ..
+      dockerfile: docker/Dockerfile
+    ports:
+      - "8001:8001"
+    environment:
+      # App config
+      - NODE_ENV=production
+      - PORT=8001
+
+      # Database config
+      - DATABASE_URL=mysql://appuser:apppassword@db:3306/navigator
+      - DB_HOST=db
+      - DB_USER=appuser
+      - DB_PASSWORD=apppassword
+      - DB_PORT=3306
+      - DB_NAME=navigator
+
+      # Token config
+      - JWT_SECRET=dev_jwt_dfgdfghd5324sgdhGDSGJHSFDSF_change_for_prod
+      - COOKIE_SECRET=dev_cookie_werfsvíGrgíetsdélkvdsfsb_change_for_prod
+
+    depends_on:
+      - db
+    restart: unless-stopped
+
+  db:
+    container_name: petrik-navigator-database
+    image: mysql:8.0
+    # Bound to localhost so the database is not reachable from other hosts.
+    volumes:
+      - mysql_data:/var/lib/mysql
+    environment:
+      - MYSQL_ROOT_PASSWORD=rootpassword
+      - MYSQL_DATABASE=petrik-navigator
+      - MYSQL_USER=appuser
+      - MYSQL_PASSWORD=apppassword
+
+  prisma-studio:
+    container_name: petrik-navigator-studio
+    image: node:24.16.0-alpine
+    working_dir: /app
+    # Prisma Studio has no authentication - bound to localhost only.
+    ports:
+      - "5555:51212"
+    environment:
+      - DATABASE_URL=mysql://appuser:apppassword@db:3306/navigator
+      - NODE_ENV=production
+    networks:
+      - backend-net
+    depends_on:
+      - db
+    command: npx prisma studio --browser none --url "mysql://appuser:apppassword@db:3306/navigator"
+
+volumes:
+  mysql_data:

@@ -1,0 +1,87 @@
+# Git
+**/.git
+**/.gitignore
+
+# IDEs and editors
+**/.vscode
+**/.idea
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+**/.project
+**/.classpath
+**/.settings
+.c9/
+*.launch
+*.sublime-workspace
+
+# OS
+**/.DS_Store
+
+# Environment files
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+.env.example
+
+# Logs
+logs
+*.log
+npm-debug.log*
+pnpm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+lerna-debug.log*
+
+# Dependencies
+**/node_modules
+
+# Build & compiled output
+**/build
+**/dist
+**/obj
+report.[0-9]*.[0-9]*.[0-9]*.[0-9]*.json
+
+# Tests & coverage
+/coverage
+/.nyc_output
+/test
+/test-utils
+**/*spec.ts
+
+# Temp
+.temp
+.tmp
+
+# Runtime
+pids
+*.pid
+*.seed
+*.pid.lock
+
+# Docker & compose
+**/docker-compose*
+**/compose.y*ml
+**/Dockerfile*
+**/.dockerignore
+
+# Build artifacts
+**/*.*proj.user
+**/*.dbmdl
+**/*.jfm
+
+# Other
+**/charts
+**/.next
+**/.cache
+**/.toolstarget
+**/.vs
+*.md
+/assets
+/uploads
+LICENSE
+**/docs
