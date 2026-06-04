@@ -33,19 +33,19 @@ services:
     restart: unless-stopped
 
   db:
-    container_name: petrik-navigator-database
+    container_name: navigator-database
     image: mysql:8.0
     # Bound to localhost so the database is not reachable from other hosts.
     volumes:
       - mysql_data:/var/lib/mysql
     environment:
       - MYSQL_ROOT_PASSWORD=rootpassword
-      - MYSQL_DATABASE=petrik-navigator
+      - MYSQL_DATABASE=navigator
       - MYSQL_USER=appuser
       - MYSQL_PASSWORD=apppassword
 
   prisma-studio:
-    container_name: petrik-navigator-studio
+    container_name: navigator-studio
     image: node:24.16.0-alpine
     working_dir: /app
     # Prisma Studio has no authentication - bound to localhost only.
@@ -54,8 +54,6 @@ services:
     environment:
       - DATABASE_URL=mysql://appuser:apppassword@db:3306/navigator
       - NODE_ENV=production
-    networks:
-      - backend-net
     depends_on:
       - db
     command: npx prisma studio --browser none --url "mysql://appuser:apppassword@db:3306/navigator"
