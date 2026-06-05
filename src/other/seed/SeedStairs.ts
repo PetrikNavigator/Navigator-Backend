@@ -8,8 +8,8 @@ export function SeedStairs(count: number, buildings_count: number): Prisma.stair
             y: -11,
             min_storey: -1,
             max_storey: 0,
-            building_id: 0,
-            rotation: 1,
+            rotation: 0,
+            building_id: 1,
         },
         {
             name: "A épület tűzlépcső",
@@ -17,8 +17,8 @@ export function SeedStairs(count: number, buildings_count: number): Prisma.stair
             y: -32,
             min_storey: 0,
             max_storey: 2,
-            building_id: 270,
-            rotation: 1,
+            rotation: 270,
+            building_id: 1,
         },
         {
             name: "Lépcső az elsőre",
@@ -26,8 +26,8 @@ export function SeedStairs(count: number, buildings_count: number): Prisma.stair
             y: -20,
             min_storey: 0,
             max_storey: 1,
-            building_id: 0,
-            rotation: 1,
+            rotation: 0,
+            building_id: 1,
         },
         {
             name: "Lépcső a másodikra",
@@ -35,8 +35,17 @@ export function SeedStairs(count: number, buildings_count: number): Prisma.stair
             y: -12,
             min_storey: 1,
             max_storey: 2,
-            building_id: 0,
-            rotation: 1,
+            rotation: 0,
+            building_id: 1,
+        },
+        {
+            name: "FőlépcsőB",
+            x: -61,
+            y: -17,
+            min_storey: 0,
+            max_storey: 3,
+            rotation: 180,
+            building_id: 2,
         },
     ]
 
