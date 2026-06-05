@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Gép: localhost:3305
--- Létrehozás ideje: 2026. Jún 04. 22:10
+-- Létrehozás ideje: 2026. Jún 05. 08:17
 -- Kiszolgáló verziója: 8.4.3
 -- PHP verzió: 8.3.16
 
@@ -70,24 +70,24 @@ CREATE TABLE `classrooms` (
 --
 
 INSERT INTO `classrooms` (`id`, `name`, `capacity`, `storey`, `x`, `y`, `rotation`, `size_x`, `size_y`, `size_z`, `description`, `building_id`, `type_id`) VALUES
-(1, 'A porta', 4, 0, 3, -1, 270, 9, 11, 6, 'A épület porta', 1, 30),
+(1, 'A porta', 4, 0, 3, -2, 270, 8, 11, 6, 'A épület porta', 1, 30),
 (2, 'A014', 1, 0, 21, 4, 90, 20, 15, 6, 'Homokminta elemző labor', 1, 3),
 (3, 'A015', 1, 0, 21, 25, 90, 20, 15, 6, 'Gőgh Zsolt', 1, 3),
 (4, 'A016', 1, 0, 11, 48, 180, 6, 15, 6, 'Király Zanza', 1, 5),
 (5, 'A017', 1, 0, 18, 48, 180, 6, 15, 6, 'Ősfasz', 1, 27),
 (6, 'A018', 1, 0, 33, 48, 180, 22, 15, 6, 'Kecskepornó', 1, 4),
 (7, 'A023', 1, 0, 55, 39, 90, 18, 20, 6, 'ezaz ezaz hu de jo', 1, 4),
-(8, 'A010', 32, 0, 14, -30, 90, 10, 11, 6, 'Kiséretségi', 1, 1),
-(9, 'A009', 15, 0, 14, -46, 90, 20, 11, 6, 'Kotyvasztó labor', 1, 3),
-(10, 'A007', 15, 0, 14, -69, 90, 24, 11, 6, 'Kotyvasztó labor 2', 1, 3),
+(8, 'A010', 32, 0, 16, -33, 90, 15, 15, 6, 'Kiséretségi', 1, 1),
+(9, 'A009', 15, 0, 16, -52, 90, 21, 15, 6, 'Kotyvasztó labor', 1, 3),
+(10, 'A007', 15, 0, 16, -78, 90, 17, 15, 6, 'Kotyvasztó labor 2', 1, 3),
 (11, 'A037', 1, 0, 59, -11, 90, 31, 21, 10, 'Tesiterem', 1, 32),
 (12, 'A034', 1, 0, 43, -1, 180, 10, 11, 6, 'fiú öltöző', 1, 31),
 (13, 'A032', 1, 0, 43, -21, 0, 10, 11, 6, 'Tot Bela', 1, 31),
-(14, 'A108', 1, 1, 16, -48, 90, 14, 15, 6, 'terem', 1, 3),
-(15, 'A109', 1, 1, 16, -36, 90, 8, 15, 6, 'Tóth Éva', 1, 7),
-(16, 'A110', 1, 1, 16, -28, 90, 6, 15, 6, 'Tanári', 1, 5),
-(17, 'A106', 1, 1, 16, -62, 90, 12, 15, 6, 'Laboránsok laborja', 1, 3),
-(18, 'A105', 1, 1, 16, -75, 90, 12, 15, 6, 'hu de jo', 1, 3),
+(14, 'A108', 1, 1, 16, -48, 90, 13, 15, 6, 'terem', 1, 3),
+(15, 'A109', 1, 1, 16, -36, 90, 9, 15, 6, 'Tóth Éva', 1, 7),
+(16, 'A110', 1, 1, 16, -27, 90, 7, 15, 6, 'Tanári', 1, 5),
+(17, 'A106', 1, 1, 16, -62, 90, 13, 15, 6, 'Laboránsok laborja', 1, 3),
+(18, 'A105', 1, 1, 16, -79, 90, 19, 15, 6, 'hu de jo', 1, 3),
 (19, 'A116', 1, 1, 21, -4, 90, 10, 15, 6, 'itt büdös van!', 1, 5),
 (20, 'A117', 1, 1, 21, 10, 90, 16, 15, 6, 'borzalom', 1, 4),
 (21, 'A118', 1, 1, 21, 27, 90, 16, 15, 6, 'masik borzalom', 1, 4),
@@ -98,7 +98,32 @@ INSERT INTO `classrooms` (`id`, `name`, `capacity`, `storey`, `x`, `y`, `rotatio
 (26, 'A122', 1, 1, 54, 50, 90, 10, 17, 6, 'iszonyatos halozat 3', 1, 4),
 (27, 'A126', 1, 1, 4, 7, 270, 10, 8, 6, 'lány wc', 1, 28),
 (28, 'A127', 1, 1, 4, -1, 270, 4, 8, 6, 'big j wc', 1, 33),
-(29, 'A128', 1, 1, 4, -6, 270, 4, 8, 6, 'event hely', 1, 29);
+(29, 'A128', 1, 1, 4, -6, 270, 4, 8, 6, 'event hely', 1, 29),
+(30, 'A205', 1, 2, 16, -79, 90, 15, 15, 6, 'kiralyok terme', 1, 1),
+(31, 'A203', 1, 2, 5, -85, 0, 5, 9, 6, 'veszelyes feliratok', 1, 26),
+(32, 'A206', 1, 2, 16, -63, 90, 15, 15, 6, 'valami terem', 1, 1),
+(33, 'A207', 1, 2, 16, -53, 90, 3, 15, 6, 'labor ize', 1, 6),
+(34, 'A208', 1, 2, 16, -45, 90, 11, 15, 6, 'fizika ezaz hu de jo', 1, 1),
+(35, 'A209', 1, 2, 16, -37, 90, 3, 15, 6, 'fizika cucc ez is gondolom', 1, 5),
+(36, 'A210', 1, 2, 16, -30, 90, 9, 15, 6, 'TV', 1, 1),
+(37, 'A005', 1, 0, 5, -85, 0, 5, 9, 6, '9-bol 2 ha mukodik', 1, 26),
+(38, 'A103', 1, 1, 5, -85, 0, 5, 9, 6, 'kanapekkal otthonos', 1, 26),
+(39, 'A026', 1, 0, 3, 6, 270, 6, 11, 6, 'event', 1, 29),
+(40, 'A024', 1, 0, 3, 15, 270, 10, 11, 6, 'női wc', 1, 28),
+(41, 'A215', 1, 2, 21, 3, 90, 21, 15, 6, 'ez is valami terem', 1, 1),
+(42, 'A216', 1, 2, 21, 25, 90, 21, 15, 6, 'osszetolt asztalok hu de jo', 1, 1),
+(43, 'A217', 1, 2, 12, 48, 180, 18, 15, 6, 'terem', 1, 1),
+(44, 'A218', 1, 2, 29, 48, 180, 14, 15, 6, 'matek', 1, 1),
+(45, 'A219', 1, 2, 40, 48, 180, 6, 15, 6, 'szabi', 1, 5),
+(46, 'A220', 1, 2, 58, 53, 90, 15, 19, 6, 'csutak terem', 1, 1),
+(47, 'A222', 1, 2, 58, 39, 90, 11, 19, 6, 'projekt munka', 1, 4),
+(48, 'A008', 1, 0, 16, -66, 90, 5, 15, 6, 'elo fognak kesziteni', 1, 6),
+(49, 'A114', 1, 1, -1, -15, 270, 5, 9, 6, 'itt lehet dohanyozni', 1, 34),
+(51, 'A213', 1, 2, 0, -20, 270, 5, 8, 6, 'tanarok szobaja', 1, 5),
+(52, 'A115', 1, 1, -1, -21, 270, 5, 9, 6, 'Toth Eva tanari', 1, 5),
+(53, 'A224', 1, 2, 4, 7, 270, 10, 8, 6, 'vecelini', 1, 28),
+(54, 'A225', 1, 2, 4, -1, 270, 4, 8, 6, 'vecelini 2', 1, 33),
+(55, 'A226', 1, 2, 4, -6, 270, 4, 8, 6, 'event', 1, 29);
 
 -- --------------------------------------------------------
 
@@ -142,7 +167,8 @@ INSERT INTO `classroom_types` (`id`, `name`, `colorhex`) VALUES
 (30, 'porta', '#8f3838ff'),
 (31, 'tornatermi öltöző', '#b69a9aff'),
 (32, 'tornaterem', '#a16886ff'),
-(33, 'tanári wc', '#590303ff');
+(33, 'tanári wc', '#590303ff'),
+(34, 'dohányzó', '#4f4f4fff');
 
 -- --------------------------------------------------------
 
@@ -181,11 +207,12 @@ INSERT INTO `corridors` (`id`, `name`, `storey`, `x1`, `y1`, `x2`, `y2`, `width`
 (11, 'ezaz', 1, 4, -16, 24, -16, 18, 1, 0, 1),
 (12, 'hudejo', 1, 11, -7, 11, 38, 5, 1, 0, 1),
 (13, 'igen', 1, 11, 38, 46, 38, 5, 1, 0, 1),
-(14, 'navegre', 1, 6, -25, 6, -81, 5, 1, 0, 1)
+(14, 'na vegre', 1, 6, -25, 6, -81, 5, 1, 0, 1),
 (15, 'ezaz2', 2, 4, -16, 24, -16, 18, 1, 0, 1),
 (16, 'hudejo2', 2, 11, -7, 11, 38, 5, 1, 0, 1),
 (17, 'igen2', 2, 11, 38, 46, 38, 5, 1, 0, 1),
-(18, 'navegre2', 2, 6, -25, 6, -81, 5, 1, 0, 1);
+(18, 'navegre2', 2, 6, -25, 6, -80, 5, 1, 0, 1),
+(19, 'Folyosó a tanári mellett', 2, 46, 53, 46, 38, 5, 1, 0, 1);
 
 -- --------------------------------------------------------
 
@@ -233,8 +260,9 @@ CREATE TABLE `stairs` (
 
 INSERT INTO `stairs` (`id`, `name`, `x`, `y`, `min_storey`, `max_storey`, `rotation`, `building_id`) VALUES
 (1, 'Lépcső a -1-re', 28, -11, -1, 0, 0, 1),
-(2, 'A épület főlépcső', 24, -21, 0, 2, 0, 1),
-(3, 'A épület tűzlépcső', 2, -32, 0, 2, 270, 1);
+(2, 'A épület tűzlépcső', 2, -32, 0, 2, 270, 1),
+(3, 'Lépcső az elsőre', 24, -20, 0, 1, 0, 1),
+(4, 'Lépcső a másodikra', 24, -12, 1, 2, 0, 1);
 
 -- --------------------------------------------------------
 
@@ -324,25 +352,25 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT a táblához `buildings`
 --
 ALTER TABLE `buildings`
-  MODIFY `id` bigint UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` bigint UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT a táblához `classrooms`
 --
 ALTER TABLE `classrooms`
-  MODIFY `id` bigint UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=30;
+  MODIFY `id` bigint UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=56;
 
 --
 -- AUTO_INCREMENT a táblához `classroom_types`
 --
 ALTER TABLE `classroom_types`
-  MODIFY `id` bigint UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=34;
+  MODIFY `id` bigint UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=35;
 
 --
 -- AUTO_INCREMENT a táblához `corridors`
 --
 ALTER TABLE `corridors`
-  MODIFY `id` bigint UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
+  MODIFY `id` bigint UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
 
 --
 -- AUTO_INCREMENT a táblához `lifts`
@@ -354,7 +382,7 @@ ALTER TABLE `lifts`
 -- AUTO_INCREMENT a táblához `stairs`
 --
 ALTER TABLE `stairs`
-  MODIFY `id` bigint UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` bigint UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT a táblához `users`

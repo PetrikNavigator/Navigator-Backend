@@ -28,6 +28,7 @@ export function SeedClassroomTypes(count: number): Prisma.classroom_typesCreateM
         { id: 31, name: "tornatermi öltöző", colorhex: "#b69a9aff" },
         { id: 32, name: "tornaterem", colorhex: "#a16886ff" },
         { id: 33, name: "tanári wc", colorhex: "#590303ff" },
+        { id: 34, name: "dohányzó", colorhex: "#4f4f4fff" },
     ]
 
     return classroom_types
