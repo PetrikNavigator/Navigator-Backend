@@ -1,7 +1,7 @@
 import { Prisma } from "generated/prisma/client";
 import * as bcrypt from "bcrypt"
 
-export async function SeedUsers(count: number): Promise<Prisma.usersCreateManyInput[]> {
+export async function SeedUsers(): Promise<Prisma.usersCreateManyInput[]> {
     const default_password = await bcrypt.hash("petrik123", 10)
 
     const users: Prisma.usersCreateManyInput[] = [

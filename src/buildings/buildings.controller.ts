@@ -5,22 +5,13 @@ import type { AuthenticatedRequest } from 'src/other/types/admin-types';
 import { CreateBuildingDto } from './dto/create-building.dto';
 import { UpdateBuildingDto } from './dto/update-building.dto';
 import { ParseBigIntPipe } from 'src/other/pipes/ParseBigIntPipe';
-import {
-  ApiAddBuilding,
-  ApiBuildingsController,
-  ApiGetBuildings,
-  ApiModifyBuilding,
-  ApiRemoveBuilding,
-} from 'src/other/decorators/documentation/buildings.decorators';
 
-@ApiBuildingsController()
 @Controller('api/buildings')
 @UseGuards(AuthGuard)
 export class BuildingsController {
   constructor(private readonly buildingsService: BuildingsService) { }
 
   @Get()
-  @ApiGetBuildings()
   getBuildings(
     @Req() request: AuthenticatedRequest,
   ) {
@@ -28,7 +19,6 @@ export class BuildingsController {
   }
 
   @Post()
-  @ApiAddBuilding()
   addBuildings(
     @Body() body: CreateBuildingDto
   ) {
@@ -36,7 +26,6 @@ export class BuildingsController {
   }
 
   @Put(":id")
-  @ApiModifyBuilding()
   modifyBuildings(
     @Param("id", ParseBigIntPipe) building_id: bigint,
     @Body() body: UpdateBuildingDto
@@ -45,7 +34,6 @@ export class BuildingsController {
   }
 
   @Delete(":id")
-  @ApiRemoveBuilding()
   removeBuildings(
     @Param("id", ParseBigIntPipe) building_id: bigint
   ) {

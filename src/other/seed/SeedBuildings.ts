@@ -1,6 +1,6 @@
 import { Prisma } from "generated/prisma/client";
 
-export function SeedBuildings(count: number): Prisma.buildingsCreateManyInput[] {
+export function SeedBuildings(): Prisma.buildingsCreateManyInput[] {
     const buildings: Prisma.buildingsCreateManyInput[] = [
         {
             name: "A épület",
@@ -11,8 +11,8 @@ export function SeedBuildings(count: number): Prisma.buildingsCreateManyInput[] 
         {
             name: "B épület",
             description: "Vegyészek és környezetvédők épülete",
-            x: -39,
-            y: -4,
+            x: 30,
+            y: -12,
         }
     ]
 

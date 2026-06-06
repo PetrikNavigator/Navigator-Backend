@@ -2,9 +2,7 @@ import { Injectable, NotFoundException } from '@nestjs/common';
 import { CreateStairDto } from './dto/create-stair.dto';
 import { UpdateStairDto } from './dto/update-stair.dto';
 import { PrismaService } from 'src/other/prisma/prisma.service';
-import { BuildingsService } from '../buildings/buildings.service';
 import { ensureUniqueNameInBuilding } from 'src/other/functions/ensure-unique-name';
-import { getBuildingIds } from 'src/other/functions/get-building-ids';
 
 @Injectable()
 export class StairsService {

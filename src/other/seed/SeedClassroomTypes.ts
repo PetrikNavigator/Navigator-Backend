@@ -1,16 +1,15 @@
 import { Prisma } from "generated/prisma/client";
 
-export function SeedClassroomTypes(count: number): Prisma.classroom_typesCreateManyInput[] {
+export function SeedClassroomTypes(): Prisma.classroom_typesCreateManyInput[] {
     const classroom_types: Prisma.classroom_typesCreateManyInput[] = [
         { name: 'tanterem', colorhex: '#447e64ff' },
-        { name: 'előadó', colorhex: '#52f2ffff' },
+        { name: 'fizika előadó', colorhex: '#52f2ffff' },
         { name: 'laboratórium', colorhex: '#554c94ff' },
         { name: 'informatika terem', colorhex: '#73a6ffff' },
         { name: 'tanári szoba', colorhex: '#ffb34dff' },
         { name: 'előkészítő', colorhex: '#d9ff4dff' },
         { name: 'csoport szoba', colorhex: '#b3ff73ff' },
         { name: 'iroda', colorhex: '#a6bfd9ff' },
-        { name: 'testnevelés terem', colorhex: '#ff734dff' },
         { name: 'öltöző', colorhex: '#d98cffff' },
         { name: 'tanári', colorhex: '#ffb34dff' },
         { name: 'könyvtár', colorhex: '#d98cffff' },

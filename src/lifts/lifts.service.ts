@@ -2,9 +2,7 @@ import { Injectable, NotFoundException } from '@nestjs/common';
 import { CreateLiftDto } from './dto/create-lift.dto';
 import { UpdateLiftDto } from './dto/update-lift.dto';
 import { PrismaService } from 'src/other/prisma/prisma.service';
-import { BuildingsService } from '../buildings/buildings.service';
 import { ensureUniqueNameInBuilding } from 'src/other/functions/ensure-unique-name';
-import { getBuildingIds } from 'src/other/functions/get-building-ids';
 import { liftsModel } from 'generated/prisma/models';
 
 @Injectable()

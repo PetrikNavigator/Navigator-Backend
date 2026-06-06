@@ -5,24 +5,16 @@ import express from 'express'
 import type { AuthenticatedRequest } from 'src/other/types/admin-types';
 import { AuthGuard } from './auth.guard';
 import {
-  ApiAuthController,
-  ApiGetMe,
-  ApiLogin,
-  ApiLogout,
-} from 'src/other/decorators/documentation/auth.decorators';
-import {
   ACCESS_TOKEN_COOKIE,
   ACCESS_TOKEN_MAX_AGE_MS,
   accessTokenCookieOptions,
 } from 'src/other/consts/cookie.consts';
 
-@ApiAuthController()
 @Controller('api/auth')
 export class AuthController {
   constructor(private readonly authService: AuthService) { }
 
   @Post("login")
-  @ApiLogin()
   async login(
     @Body() body: LoginDto,
     @Res({ passthrough: true }) res: express.Response
@@ -39,7 +31,6 @@ export class AuthController {
 
   @Get("me")
   @UseGuards(AuthGuard)
-  @ApiGetMe()
   async getMe(
     @Req() request: AuthenticatedRequest
   ) {
@@ -48,7 +39,6 @@ export class AuthController {
 
   @Post("/logout")
   @UseGuards(AuthGuard)
-  @ApiLogout()
   async logout(@Res({ passthrough: true }) response: express.Response) {
     response.clearCookie(ACCESS_TOKEN_COOKIE, accessTokenCookieOptions())
 

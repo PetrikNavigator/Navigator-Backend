@@ -1,6 +1,6 @@
 import { Prisma } from "generated/prisma/client";
 
-export function SeedStairs(count: number, buildings_count: number): Prisma.stairsCreateManyInput[] {
+export function SeedStairs(): Prisma.stairsCreateManyInput[] {
     const stairs: Prisma.stairsCreateManyInput[] = [
         {
             name: "Lépcső a mínusz egyre",

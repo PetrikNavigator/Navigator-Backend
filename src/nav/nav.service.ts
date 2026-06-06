@@ -21,7 +21,9 @@ export class NavService {
     const [buildings, classrooms, classroom_types, stairs, lifts, corridors] = await Promise.all([
       this.buildingsService.getBuildings(),
       this.classroomsService.getClassrooms(),
-      this.prisma.classroom_types.findMany(),
+      this.prisma.classroom_types.findMany({
+        orderBy: { name: "asc" }
+      }),
       this.stairsService.getStairs(),
       this.liftsService.getLifts(),
       this.corridorsService.getCorridors()

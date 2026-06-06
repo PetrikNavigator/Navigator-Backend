@@ -3,7 +3,6 @@ import { CreateCorridorDto } from './dto/create-corridor.dto';
 import { UpdateCorridorDto } from './dto/update-corridor.dto';
 import { PrismaService } from 'src/other/prisma/prisma.service';
 import { ensureUniqueNameInBuilding } from 'src/other/functions/ensure-unique-name';
-import { getBuildingIds } from 'src/other/functions/get-building-ids';
 
 @Injectable()
 export class CorridorsService {

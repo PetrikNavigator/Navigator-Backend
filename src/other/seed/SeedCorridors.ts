@@ -1,6 +1,6 @@
 import { Prisma } from "generated/prisma/client";
 
-export function SeedCorridors(count: number): Prisma.corridorsCreateManyInput[] {
+export function SeedCorridors(): Prisma.corridorsCreateManyInput[] {
 
     const corridors: Prisma.corridorsCreateManyInput[] = [
         // A epulet
@@ -13,7 +13,7 @@ export function SeedCorridors(count: number): Prisma.corridorsCreateManyInput[] 
         { name: "Lépcső fele", storey: 0, x1: 29, y1: -11, x2: 24, y2: -11, width: 9, barrier_free: false, is_outdoor: false, building_id: 1 },
         { name: "Folyosó tesiterem felé", storey: 0, x1: 48, y1: -11, x2: 29, y2: -11, width: 9, barrier_free: true, is_outdoor: false, building_id: 1 },
         { name: "Udvar A tesi", storey: 0, x1: 33, y1: -7, x2: 33, y2: 15, width: 8, barrier_free: true, is_outdoor: true, building_id: 1 },
-        { name: "Udvar B fele", storey: 0, x1: 33, y1: 15, x2: 237, y2: 15, width: 16, barrier_free: true, is_outdoor: true, building_id: 1 },
+        { name: "Udvar B fele", storey: 0, x1: 33, y1: 15, x2: 257, y2: 15, width: 15, barrier_free: true, is_outdoor: true, building_id: 1 },
 
         // elso emelet
         { name: "ezaz", storey: 1, x1: 4, y1: -16, x2: 24, y2: -16, width: 18, barrier_free: true, is_outdoor: false, building_id: 1 },

@@ -1,15 +1,13 @@
-import { ConflictException, Injectable, NotFoundException } from '@nestjs/common';
+import { ConflictException, Injectable } from '@nestjs/common';
 import { PrismaService } from 'src/other/prisma/prisma.service';
 import { CreateBuildingDto } from './dto/create-building.dto';
 import { UpdateBuildingDto } from './dto/update-building.dto';
-import { AdminsService } from 'src/users/admins/admins.service';
 import { buildingsModel } from 'generated/prisma/models';
 
 @Injectable()
 export class BuildingsService {
     constructor(
         private readonly prisma: PrismaService,
-        private readonly adminsService: AdminsService
     ) { }
 
     async getBuildings(

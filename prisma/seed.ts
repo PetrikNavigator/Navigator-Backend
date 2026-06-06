@@ -14,8 +14,7 @@ async function main() {
     console.log('\n🌱 Starting database seeding...\n')
 
     // ADMINS
-    const usersCount = 0
-    const users = await SeedUsers(usersCount)
+    const users = await SeedUsers()
     const usersResult = await prisma.users.createMany({
         data: users,
         skipDuplicates: true,
@@ -23,8 +22,7 @@ async function main() {
     console.log(`✓ Users: ${usersResult.count} inserted`)
 
     // BUILDINGS
-    const buildingsCount = 0
-    const buildings = SeedBuildings(buildingsCount)
+    const buildings = SeedBuildings()
     const buildingsResult = await prisma.buildings.createMany({
         data: buildings,
         skipDuplicates: true,
@@ -32,8 +30,7 @@ async function main() {
     console.log(`✓ Buildings: ${buildingsResult.count} inserted`)
 
     // CLASSROOM TYPES
-    const classroom_typesCount = 0
-    const classroom_types = SeedClassroomTypes(classroom_typesCount)
+    const classroom_types = SeedClassroomTypes()
     const classroom_typesResult = await prisma.classroom_types.createMany({
         data: classroom_types,
         skipDuplicates: true,
@@ -41,8 +38,7 @@ async function main() {
     console.log(`✓ Classroom Types: ${classroom_typesResult.count} inserted`)
 
     // CLASSROOMS
-    const classroomsCount = 0
-    const classrooms = SeedClassrooms(classroomsCount, classroom_typesCount)
+    const classrooms = SeedClassrooms()
     const classroomsResult = await prisma.classrooms.createMany({
         data: classrooms,
         skipDuplicates: true,
@@ -50,8 +46,7 @@ async function main() {
     console.log(`✓ Classrooms: ${classroomsResult.count} inserted`)
 
     // CORRIDORS
-    const corridorsCount = 0
-    const corridors = SeedCorridors(corridorsCount)
+    const corridors = SeedCorridors()
     const corridorsResult = await prisma.corridors.createMany({
         data: corridors,
         skipDuplicates: true,
@@ -59,8 +54,7 @@ async function main() {
     console.log(`✓ Corridors: ${corridorsResult.count} inserted`)
 
     // LIFTS
-    const liftsCount = 0
-    const lifts = SeedLifts(liftsCount, buildingsCount)
+    const lifts = SeedLifts()
     const liftsResult = await prisma.lifts.createMany({
         data: lifts,
         skipDuplicates: true,
@@ -68,8 +62,7 @@ async function main() {
     console.log(`✓ Lifts: ${liftsResult.count} inserted`)
 
     // STAIRS
-    const stairsCount = 0
-    const stairs = SeedStairs(stairsCount, buildingsCount)
+    const stairs = SeedStairs()
     const stairsResult = await prisma.stairs.createMany({
         data: stairs,
         skipDuplicates: true,

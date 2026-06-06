@@ -39,7 +39,6 @@ COPY --from=builder --chown=node:node /usr/src/app/generated ./generated
 # -------------------------------------------------------------------------------------------
 
 COPY --from=builder --chown=node:node /usr/src/app/dist ./dist
-COPY --chown=node:node resources ./resources
 COPY --chown=node:node scripts ./scripts
 
 COPY docker/docker-entrypoint.sh /usr/local/bin/docker-entrypoint.sh

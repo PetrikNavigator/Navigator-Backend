@@ -1,6 +1,6 @@
 import { Prisma } from "generated/prisma/client";
 
-export function SeedLifts(count: number, buildings_count: number): Prisma.liftsCreateManyInput[] {
+export function SeedLifts(): Prisma.liftsCreateManyInput[] {
     const lifts: Prisma.liftsCreateManyInput[] = [
         {
             name: "LiftA",
