@@ -4,7 +4,6 @@ export function SeedClassrooms(): Prisma.classroomsCreateManyInput[] {
     const classrooms: Prisma.classroomsCreateManyInput[] = [
         // A epulet
         // foldszint
-        { name: "A porta", capacity: 4, storey: 0, x: 3, y: -2, rotation: 270, size_x: 8, size_y: 11, size_z: 6, description: "A épület porta", building_id: 1, type_id: 16 },
         { name: "A005", capacity: 1, storey: 0, x: 5, y: -85, rotation: 0, size_x: 5, size_y: 9, size_z: 6, description: "9-bol 2 ha mukodik", building_id: 1, type_id: 12 },
         { name: "A007", capacity: 15, storey: 0, x: 16, y: -78, rotation: 90, size_x: 17, size_y: 15, size_z: 6, description: "Kotyvasztó labor 2", building_id: 1, type_id: 3 },
         { name: "A008", capacity: 1, storey: 0, x: 16, y: -66, rotation: 90, size_x: 5, size_y: 15, size_z: 6, description: "elo fognak kesziteni", building_id: 1, type_id: 6 },
@@ -18,6 +17,7 @@ export function SeedClassrooms(): Prisma.classroomsCreateManyInput[] {
         { name: "A023", capacity: 1, storey: 0, x: 55, y: 39, rotation: 90, size_x: 18, size_y: 20, size_z: 6, description: "ezaz ezaz hu de jo", building_id: 1, type_id: 4 },
         { name: "A024", capacity: 1, storey: 0, x: 3, y: 15, rotation: 270, size_x: 10, size_y: 11, size_z: 6, description: "női wc", building_id: 1, type_id: 14 },
         { name: "A026", capacity: 1, storey: 0, x: 3, y: 6, rotation: 270, size_x: 6, size_y: 11, size_z: 6, description: "event", building_id: 1, type_id: 15 },
+        { name: "A027", capacity: 4, storey: 0, x: 3, y: -2, rotation: 270, size_x: 8, size_y: 11, size_z: 6, description: "A épület porta", building_id: 1, type_id: 16 },
         { name: "A034", capacity: 1, storey: 0, x: 43, y: -1, rotation: 180, size_x: 10, size_y: 11, size_z: 6, description: "fiú öltöző", building_id: 1, type_id: 17 },
         { name: "A032", capacity: 1, storey: 0, x: 43, y: -21, rotation: 0, size_x: 10, size_y: 11, size_z: 6, description: "Tot Bela", building_id: 1, type_id: 17 },
         { name: "A037", capacity: 1, storey: 0, x: 59, y: -11, rotation: 90, size_x: 31, size_y: 21, size_z: 10, description: "Tesiterem", building_id: 1, type_id: 18 },

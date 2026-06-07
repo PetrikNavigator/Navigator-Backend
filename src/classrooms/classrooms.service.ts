@@ -13,7 +13,10 @@ export class ClassroomsService {
 
     async getClassrooms(): Promise<Prisma.classroomsCreateManyInput[]> {
         return await this.prisma.classrooms.findMany({
-            orderBy: { name: "asc" }
+            orderBy: [
+                { name: "asc" },
+                { building_id: "asc" }
+            ]
         })
     }
 
