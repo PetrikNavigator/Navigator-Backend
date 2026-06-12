@@ -13,9 +13,9 @@ export function SeedStairs(): Prisma.stairsCreateManyInput[] {
         },
         {
             name: "A épület tűzlépcső",
-            x: 2,
+            x: 0,
             y: -32,
-            min_storey: 0,
+            min_storey: -1,
             max_storey: 2,
             rotation: 270,
             building_id: 1,

@@ -1,6 +1,5 @@
 import { Controller, Get, UseGuards } from '@nestjs/common';
 import { NavService } from './nav.service';
-import { AuthGuard } from 'src/users/auth/auth.guard';
 
 @Controller('api/graph')
 export class NavController {

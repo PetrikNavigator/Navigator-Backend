@@ -31,6 +31,9 @@ services:
     depends_on:
       - db
     restart: unless-stopped
+    networks:
+      - default
+      - backend-net
 
   db:
     container_name: navigator-database
@@ -60,3 +63,8 @@ services:
 
 volumes:
   mysql_data:
+
+networks:
+  backend-net:
+    name: backend-net
+    external: true

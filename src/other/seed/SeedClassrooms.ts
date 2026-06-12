@@ -3,6 +3,19 @@ import { Prisma } from "generated/prisma/client";
 export function SeedClassrooms(): Prisma.classroomsCreateManyInput[] {
     const classrooms: Prisma.classroomsCreateManyInput[] = [
         // A epulet
+
+        // minusz egy
+        { name: 'A05', capacity: 1, storey: -1, x: 5, y: -85, rotation: 0, size_x: 5, size_y: 9, size_z: 5, description: 'szerintem ez zarva van', building_id: 1, type_id: 12 },
+        { name: 'A07', capacity: 1, storey: -1, x: 16, y: -78, rotation: 90, size_x: 23, size_y: 15, size_z: 5, description: 'ping pong gyula', building_id: 1, type_id: 1 },
+        { name: 'A08', capacity: 1, storey: -1, x: 16, y: -61, rotation: 90, size_x: 9, size_y: 15, size_z: 5, description: 'dok', building_id: 1, type_id: 1 },
+        { name: 'A10', capacity: 1, storey: -1, x: 16, y: -32, rotation: 90, size_x: 19, size_y: 15, size_z: 5, description: 'kazanhaz', building_id: 1, type_id: 34 },
+        { name: 'A09', capacity: 1, storey: -1, x: 16, y: -49, rotation: 90, size_x: 13, size_y: 15, size_z: 5, description: 'tere m', building_id: 1, type_id: 1 },
+        { name: 'A22', capacity: 1, storey: -1, x: -2, y: -17, rotation: 270, size_x: 6, size_y: 11, size_z: 5, description: 'meg egy wc itt lent is', building_id: 1, type_id: 15 },
+        { name: 'A23', capacity: 1, storey: -1, x: -2, y: -10, rotation: 270, size_x: 6, size_y: 11, size_z: 5, description: 'wc a noknek', building_id: 1, type_id: 14 },
+        { name: 'A24', capacity: 1, storey: -1, x: 8, y: -1, rotation: 180, size_x: 6, size_y: 11, size_z: 5, description: 'wc a tanar okn ak', building_id: 1, type_id: 19 },
+        { name: 'A28', capacity: 1, storey: -1, x: 25, y: 7, rotation: 90, size_x: 26, size_y: 15, size_z: 5, description: 'kistesi (nagyon budos van)', building_id: 1, type_id: 35 },
+        { name: 'A32', capacity: 1, storey: -1, x: 25, y: 33, rotation: 90, size_x: 6, size_y: 15, size_z: 5, description: 'noi oltozo', building_id: 1, type_id: 17 },
+
         // foldszint
         { name: "A005", capacity: 1, storey: 0, x: 5, y: -85, rotation: 0, size_x: 5, size_y: 9, size_z: 6, description: "9-bol 2 ha mukodik", building_id: 1, type_id: 12 },
         { name: "A007", capacity: 15, storey: 0, x: 16, y: -78, rotation: 90, size_x: 17, size_y: 15, size_z: 6, description: "Kotyvasztó labor 2", building_id: 1, type_id: 3 },
@@ -122,6 +135,21 @@ export function SeedClassrooms(): Prisma.classroomsCreateManyInput[] {
         { name: "B235", capacity: 1, storey: 2, x: -7, y: -33, rotation: 0, size_x: 8, size_y: 13, size_z: 6, description: "wc", building_id: 2, type_id: 15 },
         { name: "B238", capacity: 1, storey: 2, x: 3, y: -33, rotation: 0, size_x: 8, size_y: 13, size_z: 6, description: "wc", building_id: 2, type_id: 19 },
         { name: "B141", capacity: 1, storey: 1, x: 3, y: -33, rotation: 0, size_x: 8, size_y: 14, size_z: 6, description: "tanari wc", building_id: 2, type_id: 19 },
+
+        // harmadik emelet
+        { name: "B303", capacity: 1, storey: 3, x: -52, y: 0, rotation: 180, size_x: 23, size_y: 15, size_z: 6, description: "ez valamilyen terem", building_id: 2, type_id: 1 },
+        { name: "B304", capacity: 1, storey: 3, x: -32, y: 0, rotation: 180, size_x: 15, size_y: 15, size_z: 6, description: "terem", building_id: 2, type_id: 1 },
+        { name: "B305", capacity: 1, storey: 3, x: -16, y: 0, rotation: 180, size_x: 15, size_y: 15, size_z: 6, description: "juj de jo", building_id: 2, type_id: 1 },
+        { name: "B306", capacity: 1, storey: 3, x: 3, y: 0, rotation: 180, size_x: 21, size_y: 15, size_z: 6, description: "meg egy tanterem", building_id: 2, type_id: 1 },
+        { name: "B307", capacity: 1, storey: 3, x: 25, y: 0, rotation: 180, size_x: 21, size_y: 15, size_z: 6, description: "terem 1", building_id: 2, type_id: 1 },
+        { name: "B309", capacity: 1, storey: 3, x: 35, y: -31, rotation: 0, size_x: 9, size_y: 8, size_z: 6, description: "bent az eloadoban igen", building_id: 2, type_id: 5 },
+        { name: "B311", capacity: 1, storey: 3, x: 27, y: -44, rotation: 0, size_x: 25, size_y: 34, size_z: 10, description: "harmadik eloado", building_id: 2, type_id: 28 },
+        { name: "B315", capacity: 1, storey: 3, x: -4, y: -53, rotation: 0, size_x: 35, size_y: 15, size_z: 6, description: "labor2", building_id: 2, type_id: 3 },
+        { name: "B316", capacity: 1, storey: 3, x: -37, y: -53, rotation: 0, size_x: 27, size_y: 15, size_z: 6, description: "labor3", building_id: 2, type_id: 3 },
+        { name: "B332", capacity: 1, storey: 3, x: -27, y: -33, rotation: 0, size_x: 8, size_y: 13, size_z: 6, description: "ez egynoi wc", building_id: 2, type_id: 12 },
+        { name: "B335", capacity: 1, storey: 3, x: -17, y: -33, rotation: 0, size_x: 8, size_y: 13, size_z: 6, description: "event", building_id: 2, type_id: 14 },
+        { name: "B336", capacity: 1, storey: 3, x: -7, y: -33, rotation: 0, size_x: 8, size_y: 13, size_z: 6, description: "wc", building_id: 2, type_id: 15 },
+        { name: "B323", capacity: 1, storey: 3, x: -44, y: -35, rotation: 270, size_x: 15, size_y: 11, size_z: 6, description: "la bor", building_id: 2, type_id: 3 },
     ]
 
     return classrooms
