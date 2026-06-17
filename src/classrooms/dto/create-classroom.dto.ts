@@ -1,6 +1,7 @@
 import { ApiProperty } from "@nestjs/swagger"
 import { IsNotEmpty, } from "class-validator"
 import { IsDbSmallInt } from "src/other/decorators/db-checks/IsDbSmallInt.decorator"
+import { IsDbText } from "src/other/decorators/db-checks/IsDbText.decorator"
 import { IsDbTinyInt } from "src/other/decorators/db-checks/IsDbTinyInt.decorator"
 import { IsDbUnsignedInt } from "src/other/decorators/db-checks/IsDbUnsignedInt.decorator"
 import { IsDbUnsignedSmallInt } from "src/other/decorators/db-checks/IsDbUnsignedSmallInt.decorator"
@@ -59,9 +60,9 @@ export class CreateClassroomDto {
     @IsDbUnsignedInt()
     size_z: number
 
-    @ApiProperty({ description: 'Free-form description.', minLength: 1, maxLength: 191 })
+    @ApiProperty({ description: 'Free-form description.', minLength: 1, maxLength: 16000 })
     @IsNotEmpty()
-    @IsDbVarChar(1, 191)
+    @IsDbText(1, 16000)
     description: string
 
     @ApiProperty({ description: 'BigInt id of the building this classroom is in.', type: String, example: '1' })

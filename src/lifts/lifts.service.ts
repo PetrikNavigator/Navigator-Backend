@@ -32,7 +32,7 @@ export class LiftsService {
     async modifyLifts(lift_id: bigint, body: UpdateLiftDto) {
         const lift = await this.validateLiftAccess(lift_id)
 
-        if (body.name !== undefined || body.building_id !== undefined)
+        if (body.name || body.building_id)
             await ensureUniqueNameInBuilding(
                 this.prisma,
                 'lifts',

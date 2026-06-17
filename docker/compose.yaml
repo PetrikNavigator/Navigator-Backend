@@ -15,6 +15,7 @@ services:
       # App config
       - NODE_ENV=production
       - PORT=8001
+      - ADMIN_PASSWORD=petrik123
 
       # Database config
       - DATABASE_URL=mysql://appuser:apppassword@db:3306/navigator

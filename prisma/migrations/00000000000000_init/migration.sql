@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Gép: localhost:3305
--- Létrehozás ideje: 2026. Jún 04. 14:30
+-- Létrehozás ideje: 2026. Jún 17. 12:55
 -- Kiszolgáló verziója: 8.4.3
 -- PHP verzió: 8.3.16
 
@@ -29,8 +29,8 @@ SET time_zone = "+00:00";
 
 CREATE TABLE `buildings` (
   `id` bigint UNSIGNED NOT NULL,
-  `name` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `description` text COLLATE utf8mb4_unicode_ci NOT NULL,
+  `name` varchar(191) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `description` text CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
   `x` smallint NOT NULL,
   `y` smallint NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
@@ -43,7 +43,7 @@ CREATE TABLE `buildings` (
 
 CREATE TABLE `classrooms` (
   `id` bigint UNSIGNED NOT NULL,
-  `name` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `name` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
   `capacity` int UNSIGNED NOT NULL,
   `storey` tinyint NOT NULL,
   `x` smallint NOT NULL,
@@ -52,7 +52,7 @@ CREATE TABLE `classrooms` (
   `size_x` int UNSIGNED NOT NULL,
   `size_y` int UNSIGNED NOT NULL,
   `size_z` int UNSIGNED NOT NULL,
-  `description` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `description` text COLLATE utf8mb4_unicode_ci NOT NULL,
   `building_id` bigint UNSIGNED NOT NULL,
   `type_id` bigint UNSIGNED NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
@@ -65,8 +65,8 @@ CREATE TABLE `classrooms` (
 
 CREATE TABLE `classroom_types` (
   `id` bigint UNSIGNED NOT NULL,
-  `name` varchar(100) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `colorhex` varchar(9) COLLATE utf8mb4_unicode_ci DEFAULT NULL
+  `name` varchar(100) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `colorhex` varchar(9) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 -- --------------------------------------------------------
@@ -77,7 +77,7 @@ CREATE TABLE `classroom_types` (
 
 CREATE TABLE `corridors` (
   `id` bigint UNSIGNED NOT NULL,
-  `name` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `name` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
   `storey` smallint NOT NULL,
   `x1` smallint NOT NULL,
   `y1` smallint NOT NULL,
@@ -97,7 +97,7 @@ CREATE TABLE `corridors` (
 
 CREATE TABLE `lifts` (
   `id` bigint UNSIGNED NOT NULL,
-  `name` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `name` varchar(191) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
   `x` smallint NOT NULL,
   `y` smallint NOT NULL,
   `min_storey` smallint NOT NULL,
@@ -113,7 +113,7 @@ CREATE TABLE `lifts` (
 
 CREATE TABLE `stairs` (
   `id` bigint UNSIGNED NOT NULL,
-  `name` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `name` varchar(191) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
   `x` smallint NOT NULL,
   `y` smallint NOT NULL,
   `min_storey` smallint NOT NULL,
@@ -130,8 +130,8 @@ CREATE TABLE `stairs` (
 
 CREATE TABLE `users` (
   `id` bigint UNSIGNED NOT NULL,
-  `email` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `password_hash` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL
+  `email` varchar(191) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `password_hash` varchar(191) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --

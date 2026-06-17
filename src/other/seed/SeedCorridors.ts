@@ -49,13 +49,14 @@ export function SeedCorridors(): Prisma.corridorsCreateManyInput[] {
         { name: "B első emelet folyosó", storey: 1, x1: -61, y1: -17, x2: 43, y2: -17, width: 19, barrier_free: true, is_outdoor: false, building_id: 2 },
         { name: "Folyosó az óriáslabor fele1", storey: 1, x1: 11, y1: -26, x2: 11, y2: -43, width: 5, barrier_free: true, is_outdoor: false, building_id: 2 },
         { name: "Másik folyosó az óriáslabor fele1", storey: 1, x1: -34, y1: -43, x2: -34, y2: -26, width: 5, barrier_free: true, is_outdoor: false, building_id: 2 },
+        { name: "folyosó hátul", storey: 1, x1: -34, y1: -43, x2: 11, y2: -43, width: 5, barrier_free: true, is_outdoor: false, building_id: 2 },
+        { name: "folyosó angolosok fele", storey: 1, x1: 24, y1: -12, x2: 53, y2: -12, width: 5, barrier_free: false, is_outdoor: false, building_id: 1 },
 
         // masodik emelet
         { name: "Belső folyosó", storey: 2, x1: -34, y1: -43, x2: 11, y2: -43, width: 5, barrier_free: true, is_outdoor: false, building_id: 2 },
         { name: "B első emelet folyosó2", storey: 2, x1: -61, y1: -17, x2: 43, y2: -17, width: 19, barrier_free: true, is_outdoor: false, building_id: 2 },
         { name: "Folyosó az óriáslabor fele2", storey: 2, x1: 11, y1: -26, x2: 11, y2: -43, width: 5, barrier_free: true, is_outdoor: false, building_id: 2 },
         { name: "Másik folyosó az óriáslabor fele2", storey: 2, x1: -34, y1: -43, x2: -34, y2: -26, width: 5, barrier_free: true, is_outdoor: false, building_id: 2 },
-        { name: "folyosó hátul", storey: 1, x1: -34, y1: -43, x2: 11, y2: -43, width: 5, barrier_free: true, is_outdoor: false, building_id: 2 },
 
         // harmadik emelet
         { name: "B első emelet folyosó3", storey: 3, x1: -61, y1: -17, x2: 43, y2: -17, width: 19, barrier_free: true, is_outdoor: false, building_id: 2 },

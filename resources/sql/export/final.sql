@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Gép: localhost:3305
--- Létrehozás ideje: 2026. Jún 12. 18:11
+-- Létrehozás ideje: 2026. Jún 17. 13:32
 -- Kiszolgáló verziója: 8.4.3
 -- PHP verzió: 8.3.16
 
@@ -60,7 +60,7 @@ CREATE TABLE `classrooms` (
   `size_x` int UNSIGNED NOT NULL,
   `size_y` int UNSIGNED NOT NULL,
   `size_z` int UNSIGNED NOT NULL,
-  `description` varchar(191) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `description` text CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
   `building_id` bigint UNSIGNED NOT NULL,
   `type_id` bigint UNSIGNED NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
@@ -173,9 +173,8 @@ INSERT INTO `classrooms` (`id`, `name`, `capacity`, `storey`, `x`, `y`, `rotatio
 (101, 'B205', 1, 2, -16, 0, 180, 15, 15, 6, 'juj de jo', 2, 1),
 (102, 'B206', 1, 2, 3, 0, 180, 21, 15, 6, 'meg egy tanterem', 2, 1),
 (103, 'B207', 1, 2, 25, 0, 180, 21, 15, 6, 'gazdalkodj okosan', 2, 1),
-(104, 'B208', 1, 2, 35, -31, 0, 9, 8, 6, 'bent az eloadoban igen', 2, 5),
-(105, 'B210', 1, 2, 27, -44, 0, 25, 34, 10, 'masik eloado', 2, 28),
-(106, 'B212', 1, 2, 54, -19, 90, 18, 15, 6, 'ez nincs rajta a terkepen', 2, 3),
+(104, 'B208', 1, 2, 35, -31, 0, 6, 8, 6, 'bent az eloadoban igen', 2, 5),
+(105, 'B210', 1, 2, 23, -44, 0, 16, 34, 10, 'masik eloado', 2, 28),
 (107, 'B213', 1, 2, 6, -53, 0, 15, 15, 6, 'labor1', 2, 3),
 (108, 'B214', 1, 2, -10, -53, 0, 15, 15, 6, 'labor2', 2, 3),
 (109, 'B215', 1, 2, -26, -53, 0, 15, 15, 6, 'labor3', 2, 3),
@@ -192,14 +191,18 @@ INSERT INTO `classrooms` (`id`, `name`, `capacity`, `storey`, `x`, `y`, `rotatio
 (120, 'B305', 1, 3, -16, 0, 180, 15, 15, 6, 'juj de jo', 2, 1),
 (121, 'B306', 1, 3, 3, 0, 180, 21, 15, 6, 'meg egy tanterem', 2, 1),
 (122, 'B307', 1, 3, 25, 0, 180, 21, 15, 6, 'terem 1', 2, 1),
-(123, 'B309', 1, 3, 35, -31, 0, 9, 8, 6, 'bent az eloadoban igen', 2, 5),
-(124, 'B311', 1, 3, 27, -44, 0, 25, 34, 10, 'harmadik eloado', 2, 28),
+(123, 'B309', 1, 3, 36, -31, 0, 7, 10, 6, 'bent az eloadoban igen', 2, 5),
+(124, 'B311', 1, 3, 23, -43, 0, 16, 34, 10, 'harmadik eloado', 2, 28),
 (125, 'B315', 1, 3, -4, -53, 0, 35, 15, 6, 'labor2', 2, 3),
 (126, 'B316', 1, 3, -37, -53, 0, 27, 15, 6, 'labor3', 2, 3),
 (127, 'B332', 1, 3, -27, -33, 0, 8, 13, 6, 'ez egynoi wc', 2, 12),
 (128, 'B335', 1, 3, -17, -33, 0, 8, 13, 6, 'event', 2, 14),
 (129, 'B336', 1, 3, -7, -33, 0, 8, 13, 6, 'wc', 2, 15),
-(130, 'B323', 1, 3, -44, -35, 270, 15, 11, 6, 'la bor', 2, 3);
+(130, 'B323', 1, 3, -44, -35, 270, 15, 11, 6, 'la bor', 2, 3),
+(131, 'A022', 1, 0, 55, 52, 180, 20, 7, 5, 'tan ari', 1, 1),
+(132, 'A131', 1, 1, 48, -2, 180, 9, 14, 5, 'english bloody hell', 1, 5),
+(133, 'A133', 1, 1, 57, -12, 90, 13, 7, 5, 'a²+b²=c²', 1, 19),
+(134, 'A132', 1, 1, 48, -19, 0, 9, 7, 5, 'helyettesites', 1, 13);
 
 -- --------------------------------------------------------
 
@@ -311,15 +314,16 @@ INSERT INTO `corridors` (`id`, `name`, `storey`, `x1`, `y1`, `x2`, `y2`, `width`
 (30, 'B első emelet folyosó', 1, -61, -17, 43, -17, 19, 1, 0, 2),
 (31, 'Folyosó az óriáslabor fele1', 1, 11, -26, 11, -43, 5, 1, 0, 2),
 (32, 'Másik folyosó az óriáslabor fele1', 1, -34, -43, -34, -26, 5, 1, 0, 2),
-(33, 'Belső folyosó', 2, -34, -43, 11, -43, 5, 1, 0, 2),
-(34, 'B első emelet folyosó2', 2, -61, -17, 43, -17, 19, 1, 0, 2),
-(35, 'Folyosó az óriáslabor fele2', 2, 11, -26, 11, -43, 5, 1, 0, 2),
-(36, 'Másik folyosó az óriáslabor fele2', 2, -34, -43, -34, -26, 5, 1, 0, 2),
-(37, 'folyosó hátul', 1, -34, -43, 11, -43, 5, 1, 0, 2),
+(33, 'folyosó hátul', 1, -34, -43, 11, -43, 5, 1, 0, 2),
+(34, 'Belső folyosó', 2, -34, -43, 11, -43, 5, 1, 0, 2),
+(35, 'B első emelet folyosó2', 2, -61, -17, 43, -17, 19, 1, 0, 2),
+(36, 'Folyosó az óriáslabor fele2', 2, 11, -26, 11, -43, 5, 1, 0, 2),
+(37, 'Másik folyosó az óriáslabor fele2', 2, -34, -43, -34, -26, 5, 1, 0, 2),
 (38, 'B első emelet folyosó3', 3, -61, -17, 43, -17, 19, 1, 0, 2),
 (39, 'Folyosó az óriáslabor fele3', 3, 11, -26, 11, -43, 5, 1, 0, 2),
 (40, 'Másik folyosó az óriáslabor fele3', 3, -36, -43, -36, -26, 5, 1, 0, 2),
-(41, 'belső folyosó B3', 3, -36, -43, 11, -43, 5, 1, 0, 2);
+(41, 'belső folyosó B3', 3, -36, -43, 11, -43, 5, 1, 0, 2),
+(42, 'folyosó angolosok fele', 1, 24, -12, 53, -12, 5, 0, 0, 1);
 
 -- --------------------------------------------------------
 
@@ -390,10 +394,10 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `email`, `password_hash`) VALUES
-(1, 'petrik@petrik.petrik', '$2b$10$Zg4RPodkxu1mDeihduXKoe.q96c.9rFXTDpeLlawz3rlUXSEHCEbu'),
-(2, 'dami@dami.dami', '$2b$10$Zg4RPodkxu1mDeihduXKoe.q96c.9rFXTDpeLlawz3rlUXSEHCEbu'),
-(3, 'admin@admin.admin', '$2b$10$Zg4RPodkxu1mDeihduXKoe.q96c.9rFXTDpeLlawz3rlUXSEHCEbu'),
-(4, 'student@student.student', '$2b$10$Zg4RPodkxu1mDeihduXKoe.q96c.9rFXTDpeLlawz3rlUXSEHCEbu');
+(1, 'petrik@petrik.petrik', '$2b$10$U8CTJYfN8Cgsai97TI2gteI5J94kR7Wd0brfF3vaRfamzmgVycIhG'),
+(2, 'dami@dami.dami', '$2b$10$U8CTJYfN8Cgsai97TI2gteI5J94kR7Wd0brfF3vaRfamzmgVycIhG'),
+(3, 'admin@admin.admin', '$2b$10$U8CTJYfN8Cgsai97TI2gteI5J94kR7Wd0brfF3vaRfamzmgVycIhG'),
+(4, 'student@student.student', '$2b$10$U8CTJYfN8Cgsai97TI2gteI5J94kR7Wd0brfF3vaRfamzmgVycIhG');
 
 -- --------------------------------------------------------
 
@@ -417,7 +421,7 @@ CREATE TABLE `_prisma_migrations` (
 --
 
 INSERT INTO `_prisma_migrations` (`id`, `checksum`, `finished_at`, `migration_name`, `logs`, `rolled_back_at`, `started_at`, `applied_steps_count`) VALUES
-('2f9eeeb2-9083-45e8-905d-389f8f556ea6', '3cba0157c6d39a7b28518da8c39ca14e9a15c2d42e9dc51e8e51028744109961', '2026-06-12 18:10:53.392', '00000000000000_init', NULL, NULL, '2026-06-12 18:10:51.150', 1);
+('f00ff91b-c093-49db-ae8f-2edff99cc5ea', 'b146027e6a508d05b936f3ab6d685bc34e63234e54accf198e9dc9c448c050aa', '2026-06-17 12:56:47.391', '00000000000000_init', NULL, NULL, '2026-06-17 12:56:43.888', 1);
 
 --
 -- Indexek a kiírt táblákhoz
@@ -497,7 +501,7 @@ ALTER TABLE `buildings`
 -- AUTO_INCREMENT a táblához `classrooms`
 --
 ALTER TABLE `classrooms`
-  MODIFY `id` bigint UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=131;
+  MODIFY `id` bigint UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=135;
 
 --
 -- AUTO_INCREMENT a táblához `classroom_types`
@@ -509,7 +513,7 @@ ALTER TABLE `classroom_types`
 -- AUTO_INCREMENT a táblához `corridors`
 --
 ALTER TABLE `corridors`
-  MODIFY `id` bigint UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=42;
+  MODIFY `id` bigint UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=43;
 
 --
 -- AUTO_INCREMENT a táblához `lifts`

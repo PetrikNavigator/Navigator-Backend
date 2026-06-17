@@ -29,7 +29,7 @@ export class ClassroomsTypesService {
   async update(type_id: bigint, body: UpdateClassroomsTypeDto) {
     await this.verifyType(type_id)
 
-    if (body.name !== undefined) {
+    if (body.name) {
       const already = await this.prisma.classroom_types.findFirst({
         where: { name: body.name }
       })
