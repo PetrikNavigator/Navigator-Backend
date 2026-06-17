@@ -48,20 +48,6 @@ services:
       - MYSQL_USER=appuser
       - MYSQL_PASSWORD=apppassword
 
-  prisma-studio:
-    container_name: navigator-studio
-    image: node:24.16.0-alpine
-    working_dir: /app
-    # Prisma Studio has no authentication - bound to localhost only.
-    ports:
-      - "5555:51212"
-    environment:
-      - DATABASE_URL=mysql://appuser:apppassword@db:3306/navigator
-      - NODE_ENV=production
-    depends_on:
-      - db
-    command: npx prisma studio --browser none --url "mysql://appuser:apppassword@db:3306/navigator"
-
 volumes:
   mysql_data:
 
