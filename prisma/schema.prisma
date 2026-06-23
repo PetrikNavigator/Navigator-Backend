@@ -17,6 +17,14 @@ model users {
   password_hash String
 }
 
+model translations {
+  lang_key String @db.VarChar(10)
+  text_key String @db.VarChar(191)
+  text     String @db.Text
+
+  @@id([lang_key, text_key])
+}
+
 model buildings {
   id          BigInt       @id @default(autoincrement()) @db.UnsignedBigInt
   name        String       @unique @db.VarChar(191)
