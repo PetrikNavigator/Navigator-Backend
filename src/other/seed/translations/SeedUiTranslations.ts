@@ -97,7 +97,27 @@ const UI_ROWS: UiRow[] = [
     ["ui.sidebar.stairs", "Lépcsők", "Stairs"],
     ["ui.sidebar.corridors", "Folyosók", "Corridors"],
     ["ui.sidebar.preview", "3D Előnézet", "3D Preview"],
+    ["ui.sidebar.translations", "Fordítások", "Translations"],
     ["ui.sidebar.logout", "Kijelentkezés", "Log out"],
+
+    // ---- Translations editor ---------------------------------------------
+    ["ui.translation.add", "Fordítás hozzáadása", "Add translation"],
+    ["ui.translation.empty", "Nincs még fordítás. Adj hozzá egyet a jobb felső gombbal.", "No translations yet. Add one with the button in the top right."],
+    ["ui.translation.codename", "Kódnév", "Codename"],
+    ["ui.translation.edit_title", "Fordítás szerkesztése", "Edit translation"],
+    ["ui.translation.new_title", "Új fordítás", "New translation"],
+    ["ui.translation.codename_placeholder", "Pl. ui.login.submit", "e.g. ui.login.submit"],
+    ["ui.translation.lang", "Nyelv", "Language"],
+    ["ui.translation.text", "Szöveg", "Text"],
+    ["ui.translation.lang_placeholder", "Pl. hu", "e.g. hu"],
+    ["ui.translation.text_placeholder", "Fordítás szövege", "Translation text"],
+    ["ui.translation.add_language", "Nyelv hozzáadása", "Add language"],
+    ["ui.translation.remove_language", "Nyelv eltávolítása", "Remove language"],
+    ["ui.translation.search_placeholder", "Keresés kódnév vagy szöveg alapján", "Search by codename or text"],
+    ["ui.translation.err_codename", "Add meg a kódnevet", "Enter the codename"],
+    ["ui.translation.err_no_language", "Adj meg legalább egy nyelvet szöveggel", "Provide at least one language with text"],
+    ["ui.translation.err_text", "Adj meg szöveget minden nyelvhez", "Provide text for every language"],
+    ["ui.translation.err_duplicate_lang", "Egy nyelv csak egyszer szerepelhet", "Each language may appear only once"],
 
     // ---- Building editor --------------------------------------------------
     ["ui.building.add", "Épület hozzáadása", "Add building"],
