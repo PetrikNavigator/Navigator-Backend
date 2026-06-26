@@ -13,6 +13,15 @@ export class TranslationsService {
         return await this.prisma.translations.findMany()
     }
 
+    async getLanguages() {
+        const data = await this.prisma.translations.findMany({
+            select: { lang_key: true },
+            distinct: ['lang_key']
+        })
+
+        return data.map(x => x.lang_key)
+    }
+
     async getLang(lang: string): Promise<Record<string, string>> {
         if (!lang)
             throw new BadRequestException("A 'lang' query parameter is required!")

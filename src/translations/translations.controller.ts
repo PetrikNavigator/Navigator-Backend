@@ -16,11 +16,17 @@ export class TranslationsController {
     return this.translationsService.getLang(lang)
   }
 
+  @Get('available')
+  getAvailableLanguages()
+  {
+    return this.translationsService.getLanguages();
+  }
+
   @Get()
   @UseGuards(AuthGuard)
   getAll() {
     return this.translationsService.getAll()
-  }
+  }  
 
   @Post()
   @UseGuards(AuthGuard)
