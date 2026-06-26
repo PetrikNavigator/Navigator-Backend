@@ -12,6 +12,7 @@ import { JwtModule } from '@nestjs/jwt';
 import { CorridorsModule } from './corridors/corridors.module';
 import { ClassroomsTypesModule } from './classrooms_types/classrooms_types.module';
 import { NavModule } from './nav/nav.module';
+import { TranslationsModule } from './translations/translations.module';
 
 @Module({
   imports: [
@@ -20,7 +21,7 @@ import { NavModule } from './nav/nav.module';
     }),
     AuthModule, AdminsModule, BuildingsModule, ClassroomsModule,
     LiftsModule, StairsModule, JwtModule, CorridorsModule,
-    ClassroomsTypesModule, NavModule
+    ClassroomsTypesModule, NavModule, TranslationsModule
   ],
   controllers: [AppController],
   providers: [AppService],
