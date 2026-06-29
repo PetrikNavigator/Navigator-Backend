@@ -73,6 +73,10 @@ const UI_ROWS: UiRow[] = [
     ["ui.kiosk.reset", "Visszaállítás", "Reset"],
     ["ui.kiosk.loading", "Adatok betöltése…", "Loading data…"],
     ["ui.kiosk.error", "Hiba: {{error}}", "Error: {{error}}"],
+    ["ui.kiosk.welcome_title", "Kezdés", "Let's start"],
+    ["ui.kiosk.welcome_text", "Üdvözöllek a Petrik Info Appban", "Welcome to the Petrik Info App"],
+    ["ui.madeby", "Készítette:", "Made by:"],
+    ["ui.kiosk.welcome_close", "Bezárás", "Close"],
 
     // ---- Search / navigate ------------------------------------------------
     ["ui.search.placeholder", "Terem keresése", "Search for a room"],
